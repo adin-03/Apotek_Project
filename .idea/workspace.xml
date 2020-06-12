@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="698e9dbf-7f27-4e1e-8941-c2bbffcd9fab" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="70" column="92" lean-forward="false" selection-start-line="70" selection-start-column="92" selection-end-line="70" selection-end-column="92" />
+              <folding>
+                <element signature="e#7#389#0#PHP" expanded="true" />
+                <element signature="e#392#442#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/transaksi/search.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="42" column="101" lean-forward="false" selection-start-line="42" selection-start-column="101" selection-end-line="42" selection-end-column="101" />
+              <folding>
+                <marker date="1591952689535" expanded="true" signature="9:27" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="38:47" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="1378:1410" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="1665:1796" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="1958:1990" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="2057:2059" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="2065:2104" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="2109:2119" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="2632:2640" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="3147:3170" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="3405:3421" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="3487:3505" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="3572:3618" ph="..." />
+                <marker date="1591952689535" expanded="true" signature="3623:3636" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObatController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Kasir/ObatController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="61" column="11" lean-forward="true" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/transaksi/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1591940740659" expanded="true" signature="9:26" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="37:46" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="1507:1539" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="1644:1651" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="1912:1927" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="1994:2005" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="2011:2060" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="2066:2079" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="2436:2457" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="2736:2752" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="3027:3042" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="3315:3329" ph="..." />
+                <marker date="1591940740659" expanded="true" signature="3525:3544" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/transaksi/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="61" column="60" lean-forward="false" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+              <folding>
+                <marker date="1591954662250" expanded="true" signature="9:26" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="37:46" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="1514:1545" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="1800:1931" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="2093:2125" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="2192:2194" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="2199:2260" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="2265:2275" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="2563:2594" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="2792:2826" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="3952:3977" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="4082:4098" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="4160:4184" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="4306:4350" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="4410:4443" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="4506:4531" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="4536:4564" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="4801:4825" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="4887:4910" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="4973:5030" ph="..." />
+                <marker date="1591954662250" expanded="true" signature="5694:5744" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransaksiController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Kasir/TransaksiController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transaksi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Transaksi.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2020_05_12_080710_create_transaksis_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2020_05_12_080710_create_transaksis_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/transaksi/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="73" column="47" lean-forward="true" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="85" />
+              <folding>
+                <marker date="1591954662172" expanded="true" signature="9:27" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="38:47" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="1515:1547" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="1802:1933" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="2095:2127" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="2194:2196" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="2201:2262" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="2267:2277" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="2811:2846" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="3975:4000" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="4105:4121" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="4183:4207" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="4329:4373" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="4433:4466" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="4529:4554" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="4559:4587" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="4824:4848" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="4910:4933" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="4996:5053" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="5268:5309" ph="..." />
+                <marker date="1591954662172" expanded="true" signature="5717:5768" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransaksiController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apotek/TransaksiController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>data-repeater-create</find>
+      <find>mega</find>
+      <find>sear</find>
+      <find>avatar</find>
+      <find>themese</find>
+      <find>myRepeatingFields</find>
+      <find>transaksi</find>
+      <find>keselurusan</find>
+      <find>ceta</find>
+      <find>admin</find>
+      <find>obat.</find>
+      <find>sea</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>obat</replace>
+      <replace>kasir</replace>
+      <replace>apotek</replace>
+      <replace>apotek.obat.</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth-admin/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/admin/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/partials/admin/_sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/partials/admin/_navbar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/admin/beranda.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/Apotek/beranda.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Apotek/BerandaController.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/partials/apotek/_navbar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/BerandaController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AuthAdminController.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/partials/apotek.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/kasir.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/apotek.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/partials/apotek/_sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+        <option value="$PROJECT_DIR$/config/auth.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth-kasir/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Kasir/DashboardController.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/partials/kasir/_sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/kasir/merk/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Kasir/MerkController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/kasir/transaksi/search.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/kasir/transaksi/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/partials/kasir/_navbar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Kasir/AuthKasirController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Apotek/AuthApotekController.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth-apotek/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Apotek/DashboardController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/apotek/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/apotek/transaksi/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/apotek/merk/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/apotek/obat/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/apotek/obat/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/apotek/obat/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Apotek/ObatController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Apotek/MerkController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/apotek/merk/index.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_05_12_080608_create_obats_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/kasir/merk/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/kasir/obat/index.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/apotek/transaksi/search.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Kasir/ObatController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_05_12_080710_create_transaksis_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Apotek/TransaksiController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/apotek/transaksi/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/kasir/transaksi/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Kasir/TransaksiController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="5" />
+    <option name="y" value="7" />
+    <option name="width" value="699" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Apotek" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Kasir" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="seeds" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="apotek" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="kasir" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="kasir" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="transaksi" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Apotek-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apotek-Project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../apotek" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Apotek-Project\resources\views\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Apotek-Project\resources\views\pages\apotek" />
+      <recent name="C:\xampp\htdocs\Apotek-Project\app\Http\Controllers\Apotek" />
+      <recent name="C:\xampp\htdocs\Apotek-Project\app\Http\Controllers\Kasir" />
+      <recent name="C:\xampp\htdocs\Apotek-Project\resources\views\templates\partials" />
+      <recent name="C:\xampp\htdocs\Apotek-Project\resources\views\pages\admin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="698e9dbf-7f27-4e1e-8941-c2bbffcd9fab" name="Default" comment="" />
+      <created>1589270284806</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589270284806</updated>
+      <workItem from="1589270289416" duration="5261000" />
+      <workItem from="1589424311901" duration="22735000" />
+      <workItem from="1589512242133" duration="13688000" />
+      <workItem from="1589594064864" duration="32000" />
+      <workItem from="1590042765690" duration="4515000" />
+      <workItem from="1590115532802" duration="67000" />
+      <workItem from="1590501318704" duration="4457000" />
+      <workItem from="1590548262728" duration="473000" />
+      <workItem from="1590549627238" duration="6632000" />
+      <workItem from="1590757718346" duration="5686000" />
+      <workItem from="1590796297711" duration="20152000" />
+      <workItem from="1591137196168" duration="3056000" />
+      <workItem from="1591256204007" duration="2753000" />
+      <workItem from="1591281174875" duration="2616000" />
+      <workItem from="1591342248475" duration="1639000" />
+      <workItem from="1591536886157" duration="3085000" />
+      <workItem from="1591672154327" duration="9192000" />
+      <workItem from="1591766190438" duration="9629000" />
+      <workItem from="1591795689897" duration="6336000" />
+      <workItem from="1591859675262" duration="7484000" />
+      <workItem from="1591927676088" duration="1044000" />
+      <workItem from="1591939802796" duration="18447000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="148979000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2912254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27974278" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="63" column="12" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="114" column="10" lean-forward="false" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding>
+            <marker date="1590046244473" expanded="true" signature="38:70" ph="..." />
+            <marker date="1590046244473" expanded="true" signature="3336:3370" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth-kasir/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="68" lean-forward="false" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+          <folding>
+            <marker date="1591941789829" expanded="true" signature="174:193" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="293:313" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="497:519" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="725:739" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="964:974" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="1290:1306" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="1740:1750" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="2204:2238" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="2369:2388" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="2780:2793" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="2876:2906" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="2976:3003" ph="..." />
+            <marker date="1591941789829" expanded="true" signature="3050:3079" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Kasir/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1591940740506" expanded="true" signature="9:26" ph="..." />
+            <marker date="1591940740506" expanded="true" signature="37:46" ph="..." />
+            <marker date="1591940740506" expanded="true" signature="1295:1302" ph="..." />
+            <marker date="1591940740506" expanded="true" signature="1537:1549" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/beranda.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/partials/kasir/_script.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1590046118440" expanded="true" signature="41:93" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="145:212" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="264:321" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="373:445" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="497:577" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="629:694" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="746:803" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="855:914" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="966:1023" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1075:1140" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1192:1257" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1309:1359" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1411:1456" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1508:1563" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1615:1670" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1722:1803" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1855:1925" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1977:2047" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="2100:2179" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="2231:2301" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="2354:2429" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="2481:2545" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="2610:2618" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/merk/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1591940739852" expanded="true" signature="9:26" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="37:46" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="1502:1534" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="1639:1646" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="1857:1893" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="1953:1965" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="2027:2047" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="2202:2226" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="2502:2521" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/merk/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="42" lean-forward="true" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+          <folding>
+            <marker date="1591944401918" expanded="true" signature="9:26" ph="..." />
+            <marker date="1591944401918" expanded="true" signature="37:46" ph="..." />
+            <marker date="1591944401918" expanded="true" signature="1499:1518" ph="..." />
+            <marker date="1591944401918" expanded="true" signature="1788:1824" ph="..." />
+            <marker date="1591944401918" expanded="true" signature="1966:1986" ph="..." />
+            <marker date="1591944401918" expanded="true" signature="2141:2165" ph="..." />
+            <marker date="1591944401918" expanded="true" signature="2441:2466" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/transaksi/search.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="31" column="61" lean-forward="false" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+          <folding>
+            <marker date="1591945620935" expanded="true" signature="9:26" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="37:46" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="1377:1408" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="1663:1794" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="1956:1988" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="2055:2057" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="2063:2102" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="2107:2117" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="2405:2430" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="2768:2776" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="3283:3306" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="3541:3557" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="3623:3641" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="3708:3754" ph="..." />
+            <marker date="1591945620935" expanded="true" signature="3759:3772" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/transaksi/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="82" column="64" lean-forward="false" selection-start-line="82" selection-start-column="64" selection-end-line="82" selection-end-column="64" />
+          <folding>
+            <marker date="1591946172817" expanded="true" signature="9:26" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="37:46" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="1509:1539" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="2283:2298" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="2373:2382" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="2388:2406" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="2473:2486" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="3398:3442" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="3559:3587" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="3742:3774" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="4185:4221" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="4330:4350" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="4505:4529" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="4805:4835" ph="..." />
+            <marker date="1591946172817" expanded="true" signature="5267:5275" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/partials/kasir/_navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <marker date="1591946855299" expanded="true" signature="1210:1274" ph="..." />
+            <marker date="1591946855299" expanded="true" signature="1567:1631" ph="..." />
+            <marker date="1591946855299" expanded="true" signature="2111:2134" ph="..." />
+            <marker date="1591946855299" expanded="true" signature="2238:2252" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Kasir/AuthKasirController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apotek/AuthApotekController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#75#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth-apotek/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <marker date="1591947012881" expanded="true" signature="175:195" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="295:316" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="500:522" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="728:742" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="967:977" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="1293:1309" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="1743:1753" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="2207:2241" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="2372:2391" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="2783:2796" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="2879:2909" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="2979:3006" ph="..." />
+            <marker date="1591947012881" expanded="true" signature="3053:3082" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apotek/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding>
+            <element signature="e#47#83#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Kasir/MerkController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/partials/apotek/_script.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1590046118440" expanded="true" signature="41:93" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="145:212" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="264:321" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="373:445" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="497:577" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="629:694" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="746:803" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="855:914" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="966:1023" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1075:1140" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1192:1257" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1309:1359" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1411:1456" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1508:1563" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1615:1670" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1722:1803" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1855:1925" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="1977:2047" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="2100:2179" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="2231:2301" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="2354:2429" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="2481:2545" ph="..." />
+            <marker date="1590046118440" expanded="true" signature="2610:2618" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/partials/apotek/_head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1590044539809" expanded="true" signature="761:817" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="880:929" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="1156:1210" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="1266:1335" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="1391:1450" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="1506:1571" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="1627:1701" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="1757:1805" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="1861:1918" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="1974:2019" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="2075:2124" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="2180:2253" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="2309:2376" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="2432:2468" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="2524:2592" ph="..." />
+            <marker date="1590044539809" expanded="true" signature="2648:2707" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/partials/kasir/_sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="55" lean-forward="true" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+          <folding>
+            <marker date="1591943635053" expanded="true" signature="117:169" ph="..." />
+            <marker date="1591943635053" expanded="true" signature="392:439" ph="..." />
+            <marker date="1591943635053" expanded="true" signature="876:900" ph="..." />
+            <marker date="1591943635053" expanded="true" signature="1042:1067" ph="..." />
+            <marker date="1591943635053" expanded="true" signature="1204:1229" ph="..." />
+            <marker date="1591943635053" expanded="true" signature="1366:1396" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/apotek.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1591940740753" expanded="true" signature="83:104" ph="..." />
+            <marker date="1591940740753" expanded="true" signature="83:116" ph="..." />
+            <marker date="1591940740753" expanded="true" signature="322:357" ph="..." />
+            <marker date="1591940740753" expanded="true" signature="394:430" ph="..." />
+            <marker date="1591940740753" expanded="true" signature="562:571" ph="..." />
+            <marker date="1591940740753" expanded="true" signature="1355:1390" ph="..." />
+            <marker date="1591940740753" expanded="true" signature="1381:1390" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/partials/apotek/_navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="79" lean-forward="false" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+          <folding>
+            <marker date="1591867285375" expanded="true" signature="1210:1274" ph="..." />
+            <marker date="1591867285375" expanded="true" signature="1567:1631" ph="..." />
+            <marker date="1591867285375" expanded="true" signature="2111:2135" ph="..." />
+            <marker date="1591867285375" expanded="true" signature="2410:2424" ph="..." />
+            <marker date="1591867285375" expanded="true" signature="2530:2554" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/transaksi/transaksi_pdf.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1590915864843" expanded="true" signature="589:627" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="931:956" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="989:1005" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="1031:1093" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="1143:1187" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="1211:1244" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="1271:1296" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="1301:1329" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="1401:1425" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="1451:1477" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="1511:1555" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="1579:1628" ph="..." />
+            <marker date="1590915864843" expanded="true" signature="1700:1757" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding>
+            <marker date="1591947977582" expanded="true" signature="9:27" ph="..." />
+            <marker date="1591947977582" expanded="true" signature="38:47" ph="..." />
+            <marker date="1591947977582" expanded="true" signature="1296:1303" ph="..." />
+            <marker date="1591947977582" expanded="true" signature="1538:1550" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/partials/apotek/_sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1591941192231" expanded="true" signature="117:169" ph="..." />
+            <marker date="1591941192231" expanded="true" signature="392:439" ph="..." />
+            <marker date="1591941192231" expanded="true" signature="876:901" ph="..." />
+            <marker date="1591941192231" expanded="true" signature="1055:1081" ph="..." />
+            <marker date="1591941192231" expanded="true" signature="1230:1256" ph="..." />
+            <marker date="1591941192231" expanded="true" signature="1405:1436" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/transaksi/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="767">
+          <caret line="82" column="64" lean-forward="false" selection-start-line="82" selection-start-column="64" selection-end-line="82" selection-end-column="64" />
+          <folding>
+            <marker date="1591948839645" expanded="true" signature="9:27" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="38:47" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="1510:1541" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="2285:2300" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="2375:2384" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="2390:2408" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="2475:2488" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="3400:3444" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="3561:3589" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="3744:3776" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="4187:4223" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="4332:4352" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="4507:4531" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="4807:4838" ph="..." />
+            <marker date="1591948839645" expanded="true" signature="5270:5278" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/obat/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="84" column="65" lean-forward="false" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
+          <folding>
+            <marker date="1591950434920" expanded="true" signature="9:27" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="38:47" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="1378:1417" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="1522:1529" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="1790:1805" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="1872:1883" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="1889:1938" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="1944:1957" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="2314:2335" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="2361:2404" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="2520:2547" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="2702:2733" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="3085:3101" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="3127:3165" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="3276:3298" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="3453:3479" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="3832:3847" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="3873:3910" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="4020:4042" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="4197:4222" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="4574:4588" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="4614:4650" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="4759:4779" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="4934:4958" ph="..." />
+            <marker date="1591950434920" expanded="true" signature="5234:5260" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apotek/ObatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="135" column="41" lean-forward="false" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
+          <folding>
+            <element signature="e#47#83#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/obat/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="957">
+          <caret line="83" column="65" lean-forward="false" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="65" />
+          <folding>
+            <marker date="1591950434967" expanded="true" signature="9:27" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="38:47" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="1505:1531" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="1851:1866" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="1933:1942" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="1948:1959" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="2329:2372" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="2488:2515" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="2670:2701" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="3066:3104" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="3215:3237" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="3392:3418" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="3784:3821" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="3931:3952" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="4107:4132" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="4497:4533" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="4642:4662" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="4817:4841" ph="..." />
+            <marker date="1591950434967" expanded="true" signature="5117:5143" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/obat/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="64" column="78" lean-forward="false" selection-start-line="64" selection-start-column="78" selection-end-line="64" selection-end-column="78" />
+          <folding>
+            <marker date="1591950434873" expanded="true" signature="9:27" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="38:47" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="1505:1532" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="2580:2595" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="2700:2709" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="2771:2787" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="2849:2863" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="2925:2943" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="3005:3018" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="3080:3114" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="3176:3187" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="3249:3265" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="3467:3508" ph="..." />
+            <marker date="1591950434873" expanded="true" signature="3904:3942" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/merk/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1591940739852" expanded="true" signature="9:26" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="37:46" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="1502:1534" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="1639:1646" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="1857:1893" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="1953:1965" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="2027:2047" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="2202:2226" ph="..." />
+            <marker date="1591940739852" expanded="true" signature="2502:2521" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/merk/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="45" column="64" lean-forward="false" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
+          <folding>
+            <marker date="1591950005605" expanded="true" signature="9:27" ph="..." />
+            <marker date="1591950005605" expanded="true" signature="38:47" ph="..." />
+            <marker date="1591950005605" expanded="true" signature="1500:1526" ph="..." />
+            <marker date="1591950005605" expanded="true" signature="1796:1832" ph="..." />
+            <marker date="1591950005605" expanded="true" signature="1974:1994" ph="..." />
+            <marker date="1591950005605" expanded="true" signature="2149:2173" ph="..." />
+            <marker date="1591950005605" expanded="true" signature="2449:2475" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/merk/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="52" column="78" lean-forward="false" selection-start-line="52" selection-start-column="78" selection-end-line="52" selection-end-column="78" />
+          <folding>
+            <marker date="1591951403726" expanded="true" signature="9:27" ph="..." />
+            <marker date="1591951403726" expanded="true" signature="38:47" ph="..." />
+            <marker date="1591951403726" expanded="true" signature="1504:1531" ph="..." />
+            <marker date="1591951403726" expanded="true" signature="2213:2228" ph="..." />
+            <marker date="1591951403726" expanded="true" signature="2333:2342" ph="..." />
+            <marker date="1591951403726" expanded="true" signature="2404:2415" ph="..." />
+            <marker date="1591951403726" expanded="true" signature="2618:2656" ph="..." />
+            <marker date="1591951403726" expanded="true" signature="2907:2948" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apotek/MerkController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-585">
+          <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_05_12_080608_create_obats_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="91" lean-forward="false" selection-start-line="26" selection-start-column="91" selection-end-line="26" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/AdminSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/merk/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="37" column="57" lean-forward="false" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+          <folding>
+            <marker date="1591952015361" expanded="true" signature="9:26" ph="..." />
+            <marker date="1591952015361" expanded="true" signature="37:46" ph="..." />
+            <marker date="1591952015361" expanded="true" signature="2027:2042" ph="..." />
+            <marker date="1591952015361" expanded="true" signature="2147:2156" ph="..." />
+            <marker date="1591952015361" expanded="true" signature="2218:2229" ph="..." />
+            <marker date="1591952015361" expanded="true" signature="2452:2483" ph="..." />
+            <marker date="1591952015361" expanded="true" signature="2758:2792" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/obat/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="42" column="62" lean-forward="false" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+          <folding>
+            <marker date="1591952115510" expanded="true" signature="9:26" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="37:46" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="2394:2409" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="2514:2523" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="2585:2601" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="2663:2677" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="2739:2757" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="2819:2832" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="2894:2928" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="2990:3001" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="3063:3079" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="3301:3335" ph="..." />
+            <marker date="1591952115510" expanded="true" signature="3763:3794" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/transaksi/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1591940740659" expanded="true" signature="9:26" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="37:46" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="1507:1539" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="1644:1651" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="1912:1927" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="1994:2005" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="2011:2060" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="2066:2079" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="2436:2457" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="2736:2752" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="3027:3042" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="3315:3329" ph="..." />
+            <marker date="1591940740659" expanded="true" signature="3525:3544" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="70" column="92" lean-forward="false" selection-start-line="70" selection-start-column="92" selection-end-line="70" selection-end-column="92" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+            <element signature="e#392#442#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/transaksi/search.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="42" column="101" lean-forward="false" selection-start-line="42" selection-start-column="101" selection-end-line="42" selection-end-column="101" />
+          <folding>
+            <marker date="1591952689535" expanded="true" signature="9:27" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="38:47" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="1378:1410" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="1665:1796" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="1958:1990" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="2057:2059" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="2065:2104" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="2109:2119" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="2632:2640" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="3147:3170" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="3405:3421" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="3487:3505" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="3572:3618" ph="..." />
+            <marker date="1591952689535" expanded="true" signature="3623:3636" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Kasir/ObatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="61" column="11" lean-forward="true" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_05_12_080710_create_transaksis_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Apotek/TransaksiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/apotek/transaksi/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="73" column="47" lean-forward="true" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="85" />
+          <folding>
+            <marker date="1591954662172" expanded="true" signature="9:27" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="38:47" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="1515:1547" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="1802:1933" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="2095:2127" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="2194:2196" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="2201:2262" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="2267:2277" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="2811:2846" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="3975:4000" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="4105:4121" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="4183:4207" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="4329:4373" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="4433:4466" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="4529:4554" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="4559:4587" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="4824:4848" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="4910:4933" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="4996:5053" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="5268:5309" ph="..." />
+            <marker date="1591954662172" expanded="true" signature="5717:5768" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/transaksi/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="61" column="60" lean-forward="false" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+          <folding>
+            <marker date="1591954662250" expanded="true" signature="9:26" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="37:46" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="1514:1545" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="1800:1931" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="2093:2125" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="2192:2194" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="2199:2260" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="2265:2275" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="2563:2594" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="2792:2826" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="3952:3977" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="4082:4098" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="4160:4184" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="4306:4350" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="4410:4443" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="4506:4531" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="4536:4564" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="4801:4825" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="4887:4910" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="4973:5030" ph="..." />
+            <marker date="1591954662250" expanded="true" signature="5694:5744" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Transaksi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Kasir/TransaksiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
