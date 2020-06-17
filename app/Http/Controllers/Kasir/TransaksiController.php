@@ -181,4 +181,18 @@ class TransaksiController extends Controller
         $search_bulan = $request->search_bulan_1;
         return view('pages.kasir.transaksi.search', compact(['obats', 'results', 'search_bulan']));
     }
+
+    public function detail(Request $request)
+    {
+        $no_transaksi = Transaksi::latest()->first();
+        $transaksi = new Transaksi();
+        if($no_transaksi){
+            $latestTransactionNum = substr($no_transaksi->no_transaksi, 11);
+            $incrementNum = ((int)$latestTransactionNum)+1;
+            $transformedToNoTransaction = substr($no_transaksi->no_transaksi, 0, 11);
+            $transaksi->no_transaksi = $transformedToNoTransaction.$incrementNum;
+        }else{
+            $transaksi->no_transaksi = date('d-m-Y').'-1';
+        }
+    }
 }

@@ -77,7 +77,9 @@ class ObatController extends Controller
      */
     public function show($id)
     {
-        //
+        $obat = Obat::findOrFail($id);
+
+        return $obat;
     }
 
     /**

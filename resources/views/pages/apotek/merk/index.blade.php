@@ -10,13 +10,13 @@
             <div class="breadcrumbs-top float-md-right">
                 <div class="breadcrumb-wrapper mr-1">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/dashboard">Home</a>
+                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/dashboard">Home</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/merk">Merk</a>
+                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/merk">Merk</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/obat">Obat</a>
+                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/obat">Obat</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/transaksi">Transaksi</a>
+                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/transaksi">Transaksi</a>
                         </li>
                     </ol>
                 </div>
@@ -30,7 +30,8 @@
                     <div class="card">
                         <div class="card-content collapse show">
                             <div class="card-body card-dashboard">
-                                <a href="{{route('apotek.merk.create')}}" class="btn btn-info btn-md float-right">Tambah</a>
+                                <a type="button" class="btn btn-primary btn-min-width mr-1 mb-1" href="{{route('apotek.merk.create')}}">
+                                    <i class="ft-plus"></i>Tambah</a>
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered dom-jQuery-events">
                                         <thead>

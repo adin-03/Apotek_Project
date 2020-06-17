@@ -42,14 +42,14 @@
                                             @endfor
                                         </select>
 
-                                        <button class="btn btn-primary" type="submit">search</button>
+                                        <button class="btn btn-primary" type="submit"><i class="ft-search"> </i>search</button>
 
-                                        <div class=" ml-1"><a href="{{route('kasir.transaksi.create')}}" class="btn btn-info">Tambah</a>
+                                        <div class=" ml-1"><a href="{{route('kasir.transaksi.create')}}" class="btn btn-info"><i class="ft-plus"></i>Tambah</a>
                                         </div>
 
                                         <div class="ml-1">
                                             <a href="{{route('kasir.transaksi.cetak_pdf')}}" class="btn btn-primary"
-                                               target="_blank">CETAK</a>
+                                               target="_blank"><i class="ft-printer"> </i>CETAK</a>
                                         </div>
                                     </div>
                                 </form>

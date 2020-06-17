@@ -28,7 +28,7 @@ class AuthKasirController extends Controller
             return redirect()->route('kasir.dashboard');
         }
 
-        return redirect()->back();
+        return redirect()->back()->withInput($request->only('email'))->with('error', 'username dan password salah');
     }
 
     public function logout()

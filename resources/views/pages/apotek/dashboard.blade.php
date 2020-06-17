@@ -9,13 +9,13 @@
             <div class="breadcrumbs-top float-md-right">
                 <div class="breadcrumb-wrapper mr-1">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a>
+                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/dashboard">Home</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/merk">Merk</a>
+                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/merk">Merk</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/obat">Obat</a>
+                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/obat">Obat</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/transaksi">Transaksi</a>
+                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/transaksi">Transaksi</a>
                         </li>
                     </ol>
                 </div>

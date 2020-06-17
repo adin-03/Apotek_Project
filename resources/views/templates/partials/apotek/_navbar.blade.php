@@ -12,24 +12,19 @@
                     <li class="dropdown dropdown-user nav-item">
                         <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                             <span class="avatar avatar-online">
-                                <img src="{{asset('assets/app-assets/images/portrait/small/avatar-s-19.png')}}" alt="avatar">
+                                <img src="{{asset('assets/app-assets/images/portrait/small/logo.jpg')}}" alt="avatar">
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <div class="arrow_box_right"><a class="dropdown-item" href="#"><span class="avatar avatar-online"><img src="{{asset('assets/app-assets/images/portrait/small/avatar-s-19.png')}}" alt="avatar"><span class="user-name text-bold-700 ml-1">John Doe</span></span></a>
+                            <div class="arrow_box_right"><a class="dropdown-item" href="#"><span class="avatar avatar-online"><img src="{{asset('assets/app-assets/images/portrait/small/logo.jpg')}}" alt="avatar"><span class="user-name text-bold-700 ml-1">John Doe</span></span></a>
                                 <div class="dropdown-divider"></div><a class="dropdown-item" href=""><i class="ft-user"></i>Edit Profil</a>
                                 <div class="dropdown-divider"></div>
                                 {{--<a class="dropdown-item" href="login.html"><i class="ft-power"></i> Logout</a>--}}
-                                <a class="dropdown-item" href="{{ route('apotek.logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                <a class="dropdown-item" href="{{ route('apotek.logout') }}">
                                     <i class="ft-power"></i>
                                     {{ __('Logout') }}
                                 </a>
 
-                                <form id="logout-form" action="{{ route('apotek.logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
                             </div>
                         </div>
                     </li>

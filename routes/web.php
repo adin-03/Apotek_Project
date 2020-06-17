@@ -69,6 +69,13 @@ Route::group(['prefix' => 'apotek'], function () {
     Route::get('transaksi/cetak_pdf', 'Apotek\TransaksiController@cetak_pdf')->name('apotek.transaksi.cetak_pdf');
     Route::get('transaksi/search', 'Apotek\TransaksiController@search')->name('apotek.transaksi.search');
     Route::get('transaksi/destroy/{id}', 'Apotek\TransaksiController@destroy')->name('apotek.transaksi.destroy');
+
+    Route::get('karyawan', 'Apotek\KaryawanController@index')->name('apotek.karyawan.index');
+    Route::get('karyawan/create', 'Apotek\KaryawanController@create')->name('apotek.karyawan.create');
+    Route::post('karyawan/create', 'Apotek\karyawanController@store')->name('apotek.karyawan.store');
+    Route::get('karyawan/{id}/edit', 'Apotek\karyawanController@edit')->name('apotek.karyawan.edit');
+    Route::patch('karyawan/update/{id}', 'Apotek\karyawanController@update')->name('apotek.karyawan.update');
+    Route::get('karyawan/destroy/{id}', 'Apotek\karyawanController@destroy')->name('apotek.karyawan.destroy');
 });
 
 Route::group(['prefix' => 'kasir'], function () {
@@ -86,6 +93,7 @@ Route::group(['prefix' => 'kasir'], function () {
     Route::get('merk', 'Kasir\MerkController@index')->name('kasir.merk.index');
 
     Route::get('obat', 'Kasir\ObatController@index')->name('kasir.obat.index');
+    Route::get('obat/{id}', 'Kasir\ObatController@show')->name('kasir.obat.show');
 
     Route::get('transaksi', 'Kasir\TransaksiController@index')->name('kasir.transaksi.index');
     Route::get('transaksi/cetak_pdf', 'Kasir\TransaksiController@cetak_pdf')->name('kasir.transaksi.cetak_pdf');
