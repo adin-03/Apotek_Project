@@ -20,15 +20,15 @@
             <div class="card">
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-6 mb-2">
+                    <div class="col-12 col-md-6 col-xs-12 mb-2">
                       <select class="select2 form-control" id="data-obat">
-                        <option value="" selected="selected">--PIlih Obat--</option>
+                        <option value="0" selected="selected">--PIlih Obat--</option>
                         @foreach($obats as $obat)
                         <option value="{{$obat->id}}">{{$obat->nama_produk}} / {{$obat->satuan}}</option>
                         @endforeach
                     </select>
                     </div>
-                    <div class="col-6 mb-1">
+                    <div class="col-12 col-md-6 col-xs-12 mb-1">
                       <h2 class="float-right mt-1"> <strong> Total Harga : Rp. <span id="total-harga">0</span> </strong></h2>
                     </div>
                     <div class="col-12">
@@ -38,12 +38,12 @@
                   							<tr>
                   								<th width="5%">No</th>
                   								<!-- <th width="5%">Kode</th> -->
-                  								<th width="35%">Nama</th>
+                  								<th width="20%">Nama</th>
                   								<th width="20%">Merk</th>
                   								<th width="10%">Satuan</th>
                   								<th width="10%">Harga</th>
-                  								<th width="20%">Qty</th>
-                  								<th width="10%">Total</th>
+                  								<th width="40%">Qty</th>
+                  								<th width="5%">Total</th>
                                   <th width="5%">Stok</th>
                   								<th width="5%"></th>
                   							</tr>
@@ -66,23 +66,27 @@
   const daftarObat = [];
   const tabelTransaksi = document.querySelector('#tabel-transaksi');
   const totalHarga = document.querySelector('#total-harga');
-  // let tr = ``;
+
   $('.select2').on('select2:select', async function (e) {
     let tr = ``;
     const id = e.params.data.id;
-    if(id !== ''){
+    if(id > 0){
     const obat = await fetch('http://localhost:8000/kasir/transaksi/obat/'+id)
                         .then(res => res.json())
                         .then(res => res);
 
-      const filterDaftarObat = daftarObat.some(f => f.id == id);
-      if(!filterDaftarObat){
-        daftarObat.push({...obat,qty: 1});
-        daftarObat.map((o, i) => tr += tampilDaftarObat(o,i));
-        tabelTransaksi.innerHTML = tr;
-      }
+    const filterDaftarObat = daftarObat.some(f => f.id == id);
+    if(!filterDaftarObat) {
+          daftarObat.push({...obat,qty: 1});
+          daftarObat.map((o, i) => tr += tampilDaftarObat(o,i));
+          tabelTransaksi.innerHTML = tr;
+          $(".select2").data('select2').trigger('select', { data: {"id": 0}});
+        }else {
+          alert(`${e.params.data.text} sudah ada dalam tabel`)
+          $(".select2").data('select2').trigger('select', { data: {"id": 0}});
+        }
 
-      if(daftarObat.length > 0){
+      if(daftarObat.length > 0) {
           total();
           const qty = document.querySelectorAll('#qty');
           const subTotal = document.querySelectorAll('#sub-total');
