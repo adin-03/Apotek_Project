@@ -23,7 +23,7 @@ class ObatController extends Controller
 
     public function index()
     {
-        $obats = Obat::all();
+        $obats = Obat::orderBy('nama_produk', 'ASC')->get();
         return view('pages.apotek.obat.index', compact('obats'));
     }
 

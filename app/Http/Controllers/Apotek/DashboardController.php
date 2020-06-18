@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Apotek;
 
 use App\Http\Controllers\Controller;
-use App\Obat;
-use App\TransaksiObat;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Obat;
+use App\Merk;
+use App\Kasir;
+use App\TransaksiObat;
 
 class DashboardController extends Controller
 {
@@ -19,6 +20,8 @@ class DashboardController extends Controller
     {
         $obat = Obat::all()->count();
         $transaksi = TransaksiObat::all()->count();
-        return view('pages.apotek.dashboard', compact('obat', 'transaksi'));
+        $kasir = Kasir::all()->count();
+        $merk = Merk::all()->count();
+        return view('pages.apotek.dashboard', compact('obat', 'transaksi','kasir','merk'));
     }
 }

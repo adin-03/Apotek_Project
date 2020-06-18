@@ -8,6 +8,8 @@ class Obat extends Model
 {
     protected $guarded = [];
 
+    protected $hidden = ['created_at','updated_at','id_merk'];
+
 
     public function transaksiobat()
     {
@@ -19,7 +21,9 @@ class Obat extends Model
         return $this->hasMany(TransaksiObat::class, 'id_obat', 'id');
     }
 
-
-
+    public function merk()
+    {
+        return $this->belongsTo(Merk::class, 'id_merk', 'id');
+    }
 
 }

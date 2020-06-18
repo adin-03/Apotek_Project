@@ -5,22 +5,6 @@
         <div class="content-header-left col-md-4 col-12 mb-2">
             <h3 class="content-header-title">Data Transaksi</h3>
         </div>
-        <div class="content-header-right col-md-8 col-12">
-            <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/dashboard">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/merk">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/obat">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/transaksi">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="content-body"><!-- DOM - jQuery events table -->
         <section id="dom">
@@ -31,7 +15,7 @@
                             <div class="card-body card-dashboard">
 
 
-                                <form action="{{route('apotek.transaksi.search')}}" method="get">
+                                <form action="{{route('apotek.transaksi.search')}}" method="get" class="mb-2">
                                     @csrf
                                     <p>Filter Transaksi Pertiga bulan, dimulai dari bulan :</p>
                                     <div class="row">
@@ -42,14 +26,14 @@
                                             @endfor
                                         </select>
 
-                                        <button class="btn btn-primary" type="submit">search</button>
+                                        <button class="btn btn-info" type="submit"> <i class="ft-search"></i> Cari</button>
 
                                         {{--<div class=" ml-1"><a href="{{route('apotek.transaksi.create')}}" class="btn btn-info">Tambah</a>--}}
                                         {{--</div>--}}
 
                                         <div class="ml-1">
                                             <a href="{{route('apotek.transaksi.cetak_pdf')}}" class="btn btn-primary"
-                                               target="_blank">CETAK</a>
+                                               target="_blank"> <i class="ft-printer"></i> Cetak</a>
                                         </div>
                                     </div>
                                 </form>

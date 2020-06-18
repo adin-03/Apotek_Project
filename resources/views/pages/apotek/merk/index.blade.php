@@ -5,23 +5,6 @@
         <div class="content-header-left col-md-4 col-12 mb-2">
             <h3 class="content-header-title">Data Merk</h3>
         </div>
-
-        <div class="content-header-right col-md-8 col-12">
-            <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/dashboard">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/merk">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/obat">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/transaksi">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="content-body"><!-- DOM - jQuery events table -->
         <section id="dom">
@@ -36,16 +19,16 @@
                                     <table class="table table-striped table-bordered dom-jQuery-events">
                                         <thead>
                                         <tr>
-                                            <th>Id</th>
-                                            <th>Merk</th>
-                                            <th>Action</th>
+                                            <td>No</td>
+                                            <td>Merk</td>
+                                            <td align="center">Action</td>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         @foreach($merks as $merk)
                                             <tr>
-                                                <th>{{$merk->id}}</th>
-                                                <th>{{$merk->merk}}</th>
+                                                <th>{{$loop->iteration}}</th>
+                                                <th width="68%">{{$merk->merk}}</th>
                                                 <td>
                                                     <a class="btn btn-warning"
                                                        href="{{ route('apotek.merk.edit', $merk->id) }}"

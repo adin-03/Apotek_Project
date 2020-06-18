@@ -41,7 +41,7 @@
 
 
 /*Route::get('', function (){
-   return redirect()->route('kasir.dashboard'); 
+   return redirect()->route('kasir.dashboard');
 });*/
 
 Route::group(['prefix' => 'apotek'], function () {
@@ -91,6 +91,7 @@ Route::group(['prefix' => 'kasir'], function () {
     })->name('kasir.merk.index');*/
 
     Route::get('merk', 'Kasir\MerkController@index')->name('kasir.merk.index');
+    Route::get('transaksi/obat/{id}', 'Kasir\DashboardController@search');
 
     Route::get('obat', 'Kasir\ObatController@index')->name('kasir.obat.index');
     Route::get('obat/{id}', 'Kasir\ObatController@show')->name('kasir.obat.show');

@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/app-assets/css/components.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/app-assets/css/core/menu/menu-types/vertical-menu.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/app-assets/css/core/colors/palette-gradient.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/app-assets/css/pages/advanced-cards.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/assets/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/app-assets/vendors/css/forms/selects/select2.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/app-assets/css/pages/login-register.min.css')}}">

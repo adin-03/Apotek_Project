@@ -4,9 +4,9 @@
         <div class="navbar-container content">
             <div class="collapse navbar-collapse show" id="navbar-mobile">
                 <ul class="nav navbar-nav mr-auto float-left">
-                    <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                    <li class="nav-item mobile-menu d-md-none mr-auto">
+                      <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
                     <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
-                    <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
                 </ul>
                 <ul class="nav navbar-nav float-right">
                     <li class="dropdown dropdown-user nav-item">
@@ -16,10 +16,12 @@
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <div class="arrow_box_right"><a class="dropdown-item" href="#"><span class="avatar avatar-online"><img src="{{asset('assets/app-assets/images/portrait/small/logo.jpg')}}" alt="avatar"><span class="user-name text-bold-700 ml-1">John Doe</span></span></a>
+                            <div class="arrow_box_right"><a class="dropdown-item" href="#">
+                              <span class="avatar avatar-online">
+                                <span class="user-name text-bold-700 ml-1">{{Auth::user()->nama}}</span>
+                              </span></a>
                                 <div class="dropdown-divider"></div><a class="dropdown-item" href=""><i class="ft-user"></i>Edit Profil</a>
                                 <div class="dropdown-divider"></div>
-                                {{--<a class="dropdown-item" href="login.html"><i class="ft-power"></i> Logout</a>--}}
                                 <a class="dropdown-item" href="{{ route('kasir.logout') }}">
                                     <i class="ft-power"></i>
                                     {{ __('Logout') }}

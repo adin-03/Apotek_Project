@@ -17,8 +17,12 @@ class DashboardController extends Controller
 
     public function dashboard()
     {
-        $obat = Obat::all()->count();
-        $transaksi = TransaksiObat::all()->count();
-        return view('pages.kasir.dashboard', compact('obat', 'transaksi'));
+        $obats = Obat::orderBy('nama_produk', 'ASC')->get(['nama_produk','satuan','id']);
+        return view('pages.kasir.dashboard', compact('obats'));
+    }
+
+    public function search($id){
+      $obat = Obat::with('merk')->where('id', $id)->first();
+      return $obat;
     }
 }

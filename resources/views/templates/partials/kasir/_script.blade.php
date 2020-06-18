@@ -19,6 +19,7 @@
 <script src="{{asset('assets/app-assets/vendors/js/forms/select/select2.full.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('assets/app-assets/js/scripts/forms/select/form-select2.min.js')}}" type="text/javascript"></script>
 
+<script type="text/javascript" src="{{asset('assets/app-assets/js/scripts/ui/compact-menu.min.js')}}"></script>
 <script src="{{asset('assets/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js')}}" type="text/javascript"></script>
 <script src="{{asset('assets/app-assets/js/scripts/forms/form-login-register.min.js')}}" type="text/javascript"></script>
 

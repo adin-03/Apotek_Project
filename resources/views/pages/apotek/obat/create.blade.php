@@ -3,23 +3,7 @@
     <div class="content-wrapper-before"></div>
     <div class="content-header row">
         <div class="content-header-left col-md-4 col-12 mb-2">
-            <h3 class="content-header-title">Tambah Data Obat</h3>
-        </div>
-        <div class="content-header-right col-md-8 col-12">
-            <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/dashboard">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/merk">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/obat">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/transaksi">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
-            </div>
+            <h3 class="content-header-title">Tambah Obat</h3>
         </div>
     </div>
     <div class="content-body"><!-- Basic Inputs start -->
@@ -41,48 +25,57 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Nama Produk</label>
-                                        <input type="text" class="form-control {{$errors->has('nama_produk')?'is-invalid':''}}"
-                                               name="nama_produk">
+                                        <input type="text" minlength="5" class="form-control {{$errors->has('nama_produk')?'is-invalid':''}}" name="nama_produk" required>
                                         @if ($errors->has('nama_produk'))
                                             <span class="invalid-feedback" role="alert">
-                                                        <p><b>{{ $errors->first('nama_produk') }}</b></p>
-                                                    </span>
+                                              <p><b>{{ $errors->first('nama_produk') }}</b></p>
+                                            </span>
                                         @endif
                                     </div>
-                                    <div class="form-group">
-                                        <label>Satuan</label>
-                                        <input type="text" class="form-control {{$errors->has('satuan')?'is-invalid':''}}"
-                                               name="satuan">
-                                        @if ($errors->has('satuan'))
-                                            <span class="invalid-feedback" role="alert">
-                                                        <p><b>{{ $errors->first('satuan') }}</b></p>
-                                                    </span>
-                                        @endif
+                                    <div class="row">
+                                      <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Satuan</label>
+                                            <select class="form-control" name="satuan">
+                                                <option value="Pcs">Pcs</option>
+                                                <option value="Pak">Pak</option>
+                                                <option value="Tablet">Tablet</option>
+                                                <option value="Dus">Dus</option>
+                                            </select>
+                                        </div>
+                                      </div>
+                                      <div class="col-4">
+                                          <div class="form-group">
+                                              <label>Harga</label>
+                                              <div class="input-group">
+                            										<div class="input-group-prepend">
+                            											<span class="input-group-text">Rp.</span>
+                            										</div>
+                            										<input type="telp" minlength="4" class="form-control" placeholder="Masukan Harga" name="harga" required>
+                            									</div>
+                                              @if ($errors->has('harga'))
+                                                  <span class="invalid-feedback" role="alert">
+                                                              <p><b>{{ $errors->first('harga') }}</b></p>
+                                                          </span>
+                                              @endif
+                                          </div>
+                                      </div>
+                                      <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Stok</label>
+                                            <input type="number" min="1" value="1" class="form-control {{$errors->has('stok')?'is-invalid':''}}"
+                                                   name="stok">
+                                            @if ($errors->has('stok'))
+                                                <span class="invalid-feedback" role="alert">
+                                                            <p><b>{{ $errors->first('stok') }}</b></p>
+                                                        </span>
+                                            @endif
+                                        </div>
+                                      </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Harga</label>
-                                        <input type="number" class="form-control {{$errors->has('harga')?'is-invalid':''}}"
-                                               name="harga">
-                                        @if ($errors->has('harga'))
-                                            <span class="invalid-feedback" role="alert">
-                                                        <p><b>{{ $errors->first('harga') }}</b></p>
-                                                    </span>
-                                        @endif
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Stok</label>
-                                        <input type="number" class="form-control {{$errors->has('stok')?'is-invalid':''}}"
-                                               name="stok">
-                                        @if ($errors->has('stok'))
-                                            <span class="invalid-feedback" role="alert">
-                                                        <p><b>{{ $errors->first('stok') }}</b></p>
-                                                    </span>
-                                        @endif
-                                    </div>
-
                                     <div class="form-actions">
-                                        <a href="{{route('apotek.obat.index')}}" class="btn btn-warning">Cancel</a>
-                                        <button class="btn btn-success">Save</button>
+                                        <a href="{{route('apotek.obat.index')}}" class="btn btn-danger">Batal</a>
+                                        <button class="btn btn-success">Simpan</button>
                                     </div>
 
                                 </form>

@@ -28,7 +28,7 @@ class AdminSeeder extends Seeder
 
         Kasir::create([
             'nama' => 'Dahlia W',
-            'email' => 'dahliaw@mail,ocm',
+            'email' => 'dahliaw@mail.com',
             'password' => bcrypt(12345678),
             'id_apotek' => $apotek->id
         ]);

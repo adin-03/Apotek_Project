@@ -112,9 +112,6 @@
 
                                     </form>
                                 </div>
-
-                                <p class="card-subtitle text-muted text-right font-small-3 mx-2 my-1"><span>Don't have an account ? <a href="register.html" class="card-link">Sign Up</a></span></p>
-                            </div>
                         </div>
                     </div>
                 </div>
