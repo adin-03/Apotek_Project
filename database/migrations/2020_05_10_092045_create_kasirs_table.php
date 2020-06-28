@@ -21,6 +21,7 @@ class CreateKasirsTable extends Migration
             $table->timestamp('verifikasi_email')->nullable();
             $table->string('password');
             $table->bigInteger('id_apotek')->unsigned();
+            $table->boolean('status')->default(true);
             $table->rememberToken();
             $table->timestamps();
 

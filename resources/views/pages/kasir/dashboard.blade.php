@@ -16,9 +16,9 @@
     </div>
 
     <div class="row">
-        <div class="col-md-12">
             <div class="card">
-                <div class="card-body">
+                <div class="col-md-12">
+                  <div class="card-body">
                   <div class="row">
                     <div class="col-12 col-md-6 col-xs-12 mb-2">
                       <select class="select2 form-control" id="data-obat">
@@ -28,11 +28,10 @@
                         @endforeach
                     </select>
                     </div>
-                    <div class="col-12 col-md-6 col-xs-12 mb-1">
-                      <h2 class="float-right mt-1"> <strong> Total Harga : Rp. <span id="total-harga">0</span> </strong></h2>
-                    </div>
+                    <!-- <div class="col-12 col-md-6 col-xs-12 mb-1">
+                    </div> -->
                     <div class="col-12">
-                      <div style="height:250px;overflow-y:scroll;" class="table-responsive">
+                      <div style="height:230px;overflow-y:scroll;" class="table-responsive">
                           <table class="table">
                             <thead class="bg-primary white">
                   							<tr>
@@ -56,8 +55,54 @@
                     </div>
                   </div>
                 </div>
+                <div class="card-footer text-dark mb-3 mt-1">
+                  <div class="row">
+                  <div class="col-md-3 mb-1">
+                    <input type="text" class="form-control form-control-sm" name="nama" placeholder="Nama pembeli">
+                  </div>
+
+                  <div class="col-md-2 mb-1">
+                    <input type="tel" class="form-control form-control-sm" name="umur" placeholder="Umur Pembeli">
+                  </div>
+
+                  <div class="col-md-2 mb-1">
+                    <input type="tel" class="form-control form-control-sm" onchange="rupiah(this.value)" id="tunai" name="total_bayar" placeholder="Total Bayar">
+                  </div>
+                  <div class="col-md-5 border-left">
+                    <h3>
+                      <strong>
+                        <span>Total Harga</span> : Rp.
+                        <span class="float-right mr-1" id="total-harga">0</span>
+                      </strong>
+                    </h3>
+                  </div>
+                  <div class="col-md-7"></div>
+                  <div class="col-md-5 border-left">
+                    <h3>
+                      <strong>
+                        <span style="margin-right: 6px; max-width: 6px;">Total Bayar</span> : Rp.
+                        <span class="float-right mr-1" id="total-bayar">-</span>
+                      </strong>
+                    </h3>
+                  </div>
+                  <div class="col-md-7"></div>
+                  <div class="col-md-5 border-left">
+                    <h3>
+                      <strong>
+                        <span style="margin-right: 44px; max-width: 6px;">Kembali</span> : Rp.
+                        <span class="float-right mr-1" id="kembali">-</span>
+                      </strong>
+                    </h3>
+                  </div>
+                  <div class="col-md-12">
+                    <button type="button" class="float-right btn btn-primary btn-min-width mt-1 btn-lg">Selesai</button>
+                  </div>
+                  </div>
+                </div>
+
             </div>
         </div>
+
     </div>
 @endsection
 @section('script')
@@ -66,6 +111,23 @@
   const daftarObat = [];
   const tabelTransaksi = document.querySelector('#tabel-transaksi');
   const totalHarga = document.querySelector('#total-harga');
+  const totalBayar = document.querySelector('#total-bayar');
+  const tunai = document.querySelector('#tunai');
+  const kembali = document.querySelector('#kembali');
+
+  tunai.addEventListener('input', function(){
+    // console.log(total());
+    if(this.value === '' || total() < 1){
+      totalBayar.innerText = '-'
+      kembali.innerText = '-'
+    }else if (this.value >= total()) {
+      totalBayar.innerText = rupiah(this.value);
+      kembali.innerText = rupiah(total() - this.value);
+    }else {
+      totalBayar.innerText = rupiah(this.value);
+      kembali.innerText = '-'
+    }
+  })
 
   $('.select2').on('select2:select', async function (e) {
     let tr = ``;
@@ -82,7 +144,7 @@
           tabelTransaksi.innerHTML = tr;
           $(".select2").data('select2').trigger('select', { data: {"id": 0}});
         }else {
-          alert(`${e.params.data.text} sudah ada dalam tabel`)
+          alert(`${e.params.data.text} sudah ada dalam transaksi`)
           $(".select2").data('select2').trigger('select', { data: {"id": 0}});
         }
 
@@ -90,6 +152,13 @@
           total();
           const qty = document.querySelectorAll('#qty');
           const subTotal = document.querySelectorAll('#sub-total');
+
+          if (tunai.value >= total()) {
+            kembali.innerText = rupiah(total() - +tunai.value)
+          }else {
+            kembali.innerText = '-'
+          }
+
           function calculation() {
           let qtyHarga = this.value * this.dataset.harga;
           if(+this.dataset.stok < +this.value){
@@ -98,14 +167,27 @@
               qtyHarga = this.dataset.stok * this.dataset.harga;
               subTotal[this.dataset.index].innerText = rupiah(qtyHarga);
               daftarObat[this.dataset.index].qty = this.dataset.stok;
-              total()
+              total();
+              if (tunai.value >= total()) {
+                kembali.innerText = rupiah(total() - +tunai.value)
+              }
+              else {
+                  kembali.innerText = '-'
+              }
             }else {
                qtyHarga = this.value * this.dataset.harga;
                subTotal[this.dataset.index].innerText = rupiah(qtyHarga);
                daftarObat[this.dataset.index].qty = this.value;
                this.innerText = daftarObat[this.dataset.index].qty
-              total();
+                total();
+                if (tunai.value >= total()) {
+                  kembali.innerText = rupiah(total() - +tunai.value)
+                }
+                else {
+                    kembali.innerText = '-'
+                }
             }
+
           }
 
           qty.forEach(q => q.addEventListener('input', calculation))
@@ -120,12 +202,20 @@
     daftarObat.map((o, i) => deleteRow += tampilDaftarObat(o,i));
     tabelTransaksi.innerHTML = deleteRow;
     total();
+    if(total() < 1){
+      totalBayar.innerText = '-'
+      kembali.innerText = '-'
+    }else {
+      totalBayar.innerText = rupiah(tunai.value);
+      kembali.innerText = rupiah(total() - +tunai.value)
+    }
   }
 
   function total(){
     const total = daftarObat.length > 0 ?
     daftarObat.map(o => +o.harga * +o.qty).reduce((a,b) => a + b) : 0
     totalHarga.innerText = rupiah(total)
+    return total
   }
 
   function rupiah(angka){

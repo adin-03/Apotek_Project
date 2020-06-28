@@ -17,9 +17,11 @@ class CreateTransaksiObatsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('id_obat')->unsigned();
             $table->bigInteger('id_transaksi')->unsigned();
+            $table->string('nama_produk');
+            $table->integer('harga');
             $table->integer('kuantitas');
-            $table->integer('total_harga_perproduk');
-            $table->timestamps();
+            $table->integer('total');
+
             $table->foreign('id_obat')->references('id')->on('obats')->onDelete('CASCADE');
             $table->foreign('id_transaksi')->references('id')->on('transaksis')->onDelete('CASCADE');
         });
