@@ -163,9 +163,13 @@ class TransaksiController extends Controller
             return $row->sum('kuantitas');
         });
 
+        $total_harga_perproduk = $ts->groupBy('id_obat')->map(function ($row){
+            return $row->sum('total_harga_perproduk');
+        });
+
         $obats = Obat::all();
 
         $search_bulan = $request->search_bulan_1;
-        return view('pages.apotek.transaksi.search', compact(['obats', 'results', 'search_bulan']));
+        return view('pages.apotek.transaksi.search', compact(['obats', 'results', 'search_bulan', 'total_harga_perproduk']));
     }
 }

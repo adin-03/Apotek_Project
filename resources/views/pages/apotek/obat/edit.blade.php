@@ -5,22 +5,6 @@
         <div class="content-header-left col-md-4 col-12 mb-2">
             <h3 class="content-header-title">Edit Form Obat</h3>
         </div>
-        <div class="content-header-right col-md-8 col-12">
-            <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/dashboard">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/merk">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/obat">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/transaksi">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="content-body"><!-- Basic Inputs start -->
         <section class="basic-inputs">
@@ -40,6 +24,7 @@
                                             @endforeach
                                         </select>
                                     </div>
+
                                     <div class="form-group">
                                         <label>Nama Produk</label>
                                         <input type="text" value="{{$obats -> nama_produk}}" class="form-control {{$errors->has('nama_produk')?'is-invalid':''}}"

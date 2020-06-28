@@ -13,11 +13,11 @@
             </li>
             <li class="nav-item"><a class="@if(Request::is('apotek/merk') || Request::is('apotek/merk/*'))  active @endif" href="{{route('apotek.merk.index')}}"><i class="ft-life-buoy"></i><span class="menu-title" data-i18n="">Merk</span></a>
             </li>
-            <li class="nav-item"><a class="@if(Request::is('apotek/obat') || Request::is('apotek/obat/*')) active @endif" href="{{route('apotek.obat.index')}}"><i class="ft-folder"></i><span class="menu-title" data-i18n="">Obat</span></a>
+            <li class="nav-item"><a class="@if(Request::is('apotek/obat') || Request::is('apotek/obat/*')) active @endif" href="{{route('apotek.obat.index')}}"><i class="ft-briefcase"></i><span class="menu-title" data-i18n="">Obat</span></a>
             </li>
-            <li class="nav-item"><a class="@if(Request::is('apotek/transaksi')) active @endif" href="{{route('apotek.transaksi.index')}}"><i class="ft-credit-card"></i><span class="menu-title" data-i18n="">Transaksi</span></a>
+            <li class="nav-item"><a class="@if(Request::is('apotek/transaksi')) active @endif" href="{{route('apotek.transaksi.index')}}"><i class="ft-shopping-cart"></i><span class="menu-title" data-i18n="">Transaksi</span></a>
             </li>
-            <li class="nav-item"><a class="@if(Request::is('apotek/managment')) active @endif" href="{{route('apotek.karyawan.index')}}"><i class="ft-user"></i><span class="menu-title" data-i18n="">Managment</span></a>
+            <li class="nav-item"><a class="@if(Request::is('apotek/managment')) active @endif" href="{{route('apotek.karyawan.index')}}"><i class="ft-users"></i><span class="menu-title" data-i18n="">Managment</span></a>
             </li>
         </ul>
     </div>

@@ -9,7 +9,7 @@
     <div class="navigation-background"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class=" nav-item"><a class="@if(Request::is('kasir/dashboard')) active @endif" href="{{route('kasir.dashboard')}}"><i class="ft-pie-chart"></i><span class="menu-title" data-i18n="">Dashboard</span></a></li>
+            <li class=" nav-item"><a class="@if(Request::is('kasir/dashboard')) active @endif" href="{{route('kasir.dashboard')}}"><i class="ft-shopping-cart"></i><span class="menu-title" data-i18n="">Kasir</span></a></li>
 
             <li class=" nav-item"><a href="{{route('kasir.merk.index')}}"><i class="ft-life-buoy"></i><span class="menu-title" data-i18n="">Merk</span></a></li>
 

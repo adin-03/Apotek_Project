@@ -103,7 +103,7 @@ class ObatController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'nama_produk' => 'required',
+            'nama_produk' => 'required|unique:obats',
             'satuan' => 'string|required',
             'harga' => 'numeric|required',
             'stok' => 'numeric|required'

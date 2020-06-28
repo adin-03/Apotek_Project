@@ -52,6 +52,7 @@
                                                 <th>No</th>
                                                 <th>Obat</th>
                                                 <th>Total Penjualan</th>
+                                                <th>Total Harga per produk</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -64,7 +65,10 @@
                                                     <td>{{$loop->iteration}}</td>
                                                     <td>{{$obat->nama_produk}}</td>
 
+
                                                     <td>{{isset($results[$key+1]) ? $results[$key+1] : 0}} {{$obat->satuan}}</td>
+                                                    <td>{{isset($total_harga_perproduk[$key+1]) ? 'Rp. '. number_format($total_harga_perproduk[$key+1]) : 'Rp. '. 0}}</td>
+
                                                 </tr>
                                             @endforeach
                                             </tbody>

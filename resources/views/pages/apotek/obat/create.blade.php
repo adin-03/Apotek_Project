@@ -23,6 +23,7 @@
                                             @endforeach
                                         </select>
                                     </div>
+
                                     <div class="form-group">
                                         <label>Nama Produk</label>
                                         <input type="text" minlength="5" class="form-control {{$errors->has('nama_produk')?'is-invalid':''}}" name="nama_produk" required>
@@ -38,9 +39,10 @@
                                             <label>Satuan</label>
                                             <select class="form-control" name="satuan">
                                                 <option value="Pcs">Pcs</option>
-                                                <option value="Pak">Pak</option>
+                                                <option value="Botol">Botol</option>
                                                 <option value="Tablet">Tablet</option>
-                                                <option value="Dus">Dus</option>
+                                                <option value="Strip">Strip</option>
+                                                <option value="Kapsul">Kapsul</option>
                                             </select>
                                         </div>
                                       </div>

@@ -29,7 +29,8 @@ class KaryawanController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'nama' => 'required|unique:kasirs'
+            'nama' => 'required|unique:kasirs',
+            'alamat' => 'required'
         ],[
             'required' => ':attribute Tidak Boleh Kosong',
             'unique' => ':attribute Sudah ada'
@@ -38,6 +39,7 @@ class KaryawanController extends Controller
         $karyawan = new Kasir();
         $karyawan->id_apotek = Auth::guard('apotek')->user()->id;
         $karyawan->nama = $request->nama;
+        $karyawan->alamat = $request->alamat;
         $karyawan->email = $request->email;
         $karyawan->password = Hash::make($request->password);
         $karyawan->save();

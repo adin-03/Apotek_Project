@@ -33,7 +33,7 @@
                                     <table class="table table-striped table-bordered dom-jQuery-events">
                                         <thead>
                                         <tr>
-                                            <th>Id</th>
+                                            <th>No</th>
                                             <th>Kode</th>
                                             <th>Id Merk</th>
                                             <th>Nama Produk</th>

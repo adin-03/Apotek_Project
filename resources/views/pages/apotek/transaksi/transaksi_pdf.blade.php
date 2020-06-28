@@ -13,8 +13,8 @@
     }
 </style>
 <center>
-    <h5>Membuat Laporan PDF Dengan DOMPDF Laravel</h4>
-        <h6><a target="_blank" href="#">Jl. Raya</a>
+    <h5>Laporan Transaksi Apotek Cemara</h4>
+        <h6><a target="_blank" href="#">Jl.Panarukan 50 Adiwerna Kab. Tegal</a>
     </h5>
 </center>
 
@@ -25,7 +25,7 @@
     <thead>
     <tr>
         <th>No</th>
-        <th>Tanggal</th>
+        <th>No Transaksi</th>
         <th>Nama Produk / Kuantitas</th>
         <th>Nama Pembeli</th>
         <th>Umur</th>
@@ -37,7 +37,7 @@
     @foreach($transaksis as $transaksi)
         <tr>
             <td>{{$loop->iteration}}</td>
-            <td>{{\Carbon\Carbon::parse($transaksi->created_at)->format('d M Y')}}</td>
+            <td>{{$transaksi->no_transaksi}}</td>
             <td>
                 @foreach($transaksi->transaksiobats as $transaksiobat)
                     {{$transaksiobat->obat->nama_produk}}

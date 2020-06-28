@@ -26,7 +26,7 @@
                                             <td>Satuan</td>
                                             <td>Harga</td>
                                             <td>Stok</td>
-                                            <!-- <th>Sisa Stok</th> -->
+                                            <td>Sisa Stok</td>
                                             <td align="center">action</td>
                                         </tr>
                                         </thead>
@@ -40,15 +40,15 @@
                                                 <th>{{$obat->satuan}}</th>
                                                 <th>{{'Rp. '.number_format($obat->harga, 0,',','.')}}</th>
                                                 <th>{{$obat->stok}}</th>
-                                                <!-- <th>{{$obat->sisa_stok}}</th> -->
+                                                <th>{{$obat->sisa_stok}}</th>
                                                 <td width="17%">
                                                     <a class="btn btn-warning btn-sm" href="{{ route('apotek.obat.edit', $obat->id) }}">
                                                       <i class="ft-edit"></i>
                                                     </a>
-                                                    <button class="btn btn-danger btn-sm" href="{{ route('apotek.obat.destroy', $obat->id) }}"
+                                                    <a class="btn btn-danger btn-sm" href="{{ route('apotek.obat.destroy', $obat->id) }}"
                                                        onclick="return confirm('Apakah Anda Akan Menghapus obat {{$obat->nama_produk}}?')"
                                                        type="button"> <i class="ft-trash-2"></i>
-                                                     </button>
+                                                     </a>
                                                 </td>
                                             </tr>
                                         @endforeach

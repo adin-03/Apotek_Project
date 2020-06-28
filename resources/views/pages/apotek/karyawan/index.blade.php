@@ -7,18 +7,7 @@
         </div>
         <div class="content-header-right col-md-8 col-12">
             <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/dashboard">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/merk">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/obat">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/transaksi">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
+
             </div>
         </div>
     </div>
@@ -37,6 +26,7 @@
                                         <tr>
                                             <th>Id</th>
                                             <th>Nama</th>
+                                            <th>Alamat</th>
                                             <th>Email</th>
                                             <th>action</th>
                                         </tr>
@@ -46,6 +36,7 @@
                                             <tr>
                                                 <th>{{$karyawan->id}}</th>
                                                 <th>{{$karyawan->nama}}</th>
+                                                <th>{{$karyawan->alamat}}</th>
                                                 <th>{{$karyawan->email}}</th>
                                                 <td>
                                                     <a class="btn btn-danger"

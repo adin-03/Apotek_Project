@@ -7,18 +7,6 @@
         </div>
         <div class="content-header-right col-md-8 col-12">
             <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/dashboard">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/merk">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/obat">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/transaksi">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
             </div>
         </div>
     </div>
@@ -39,6 +27,16 @@
                                         @if ($errors->has('nama'))
                                             <span class="invalid-feedback" role="alert">
                                                         <p><b>{{ $errors->first('nama') }}</b></p>
+                                                    </span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Alamat</label>
+                                        <input type="text" value="{{$kasirs -> alamat}}" class="form-control {{$errors->has('alamat')?'is-invalid':''}}"
+                                               name="alamat">
+                                        @if ($errors->has('alamat'))
+                                            <span class="invalid-feedback" role="alert">
+                                                        <p><b>{{ $errors->first('alamat') }}</b></p>
                                                     </span>
                                         @endif
                                     </div>
