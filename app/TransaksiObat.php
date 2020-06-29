@@ -12,8 +12,5 @@ class TransaksiObat extends Model
         return $this->belongsTo(Obat::class, 'id_obat', 'id');
     }
 
-    public function countTransaksi()
-    {
-        return $this->obat()->groupBy('id_obat')->sum('kuantitas');
-    }
+    public $timestamps = false;
 }

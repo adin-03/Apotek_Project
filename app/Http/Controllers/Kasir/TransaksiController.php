@@ -10,6 +10,7 @@ use Barryvdh\DomPDF\Facade as PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Auth;
 
 class TransaksiController extends Controller
 {
@@ -27,7 +28,7 @@ class TransaksiController extends Controller
     public function index()
     {
         $search_bulan = 0;
-        $transaksis = Transaksi::all();
+        $transaksis = Transaksi::where('id_kasir', Auth::user()->id)->orderBy('id','DESC')->get();
         return view('pages.kasir.transaksi.index', compact(['transaksis', 'search_bulan']));
     }
 

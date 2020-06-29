@@ -8,8 +8,13 @@ class Transaksi extends Model
 {
     protected $guarded = [];
 
-    public function transaksiobats()
+    public function obats()
     {
         return $this->hasMany(TransaksiObat::class, 'id_transaksi', 'id');
+    }
+
+    public function kasir()
+    {
+        return $this->belongsTo(Kasir::class, 'id_kasir', 'id');
     }
 }
