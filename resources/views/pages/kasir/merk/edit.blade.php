@@ -29,7 +29,7 @@
                     <div class="card">
                         <div class="card-block">
                             <div class="card-body">
-                                <form action="{{route('merk.update', $merks->id)}}" method="post">
+                                <form action="{{route('apotek.merk.update', $merks->id)}}" method="post">
                                     @csrf
                                     @method('patch')
                                     <div class="form-group">
@@ -44,7 +44,7 @@
                                     </div>
 
                                     <div class="form-actions">
-                                        <a href="{{route('merk.index')}}" class="btn btn-warning">Cancel</a>
+                                        <a href="{{route('apotek.merk.index')}}" class="btn btn-warning">Cancel</a>
                                         <button class="btn btn-success">Save</button>
                                     </div>
 

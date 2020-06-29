@@ -55,7 +55,7 @@ Route::group(['prefix' => 'apotek'], function () {
     Route::get('merk/create', 'Apotek\MerkController@create')->name('apotek.merk.create');
     Route::post('merk/create', 'Apotek\MerkController@store')->name('apotek.merk.store');
     Route::get('merk/{id}/edit', 'Apotek\MerkController@edit')->name('apotek.merk.edit');
-    Route::patch('merk/update/{id}', 'Apotel\MerkController@update')->name('apotek.merk.update');
+    Route::patch('merk/update/{id}', 'Apotek\MerkController@update')->name('apotek.merk.update');
     Route::get('merk/destroy/{id}', 'Apotek\MerkController@destroy')->name('apotek.merk.destroy');
 
     Route::get('obat', 'Apotek\ObatController@index')->name('apotek.obat.index');
@@ -85,10 +85,7 @@ Route::group(['prefix' => 'kasir'], function () {
     Route::get('/logout', 'Kasir\AuthKasirController@logout')->name('kasir.logout');
 
     Route::get('dashboard', 'Kasir\DashboardController@dashboard')->name('kasir.dashboard');
-
-    /*Route::get('merk', function (){
-        return 'aaaa';
-    })->name('kasir.merk.index');*/
+    Route::post('dashboard', 'Kasir\DashboardController@store');
 
     Route::get('merk', 'Kasir\MerkController@index')->name('kasir.merk.index');
     Route::get('transaksi/obat/{id}', 'Kasir\DashboardController@search');

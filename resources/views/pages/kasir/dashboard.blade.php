@@ -58,11 +58,11 @@
                 <div class="card-footer text-dark mb-3 mt-1">
                   <div class="row">
                   <div class="col-md-3 mb-1">
-                    <input type="text" class="form-control form-control-sm" name="nama" placeholder="Nama pembeli">
+                    <input type="text" class="form-control form-control-sm" id="nama-pembeli" name="nama" placeholder="Nama pembeli">
                   </div>
 
                   <div class="col-md-2 mb-1">
-                    <input type="tel" class="form-control form-control-sm" name="umur" placeholder="Umur Pembeli">
+                    <input type="tel" class="form-control form-control-sm" name="umur" id="umur" placeholder="Umur Pembeli">
                   </div>
 
                   <div class="col-md-2 mb-1">
@@ -95,15 +95,52 @@
                     </h3>
                   </div>
                   <div class="col-md-12">
-                    <button type="button" class="float-right btn btn-primary btn-min-width mt-1 btn-lg">Selesai</button>
+                    <button type="button" data-toggle="modal" id="selesai" data-target="" class="float-right btn btn-primary btn-min-width mt-1 btn-lg">Selesai</button>
                   </div>
                   </div>
                 </div>
 
             </div>
         </div>
-
     </div>
+
+  <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel1" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-success white">
+				<h4 class="modal-title white" id="basicModalLabel1">Detail Pembayaran</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<div class="modal-body">
+          <h5 id="detail-nama"></h5>
+          <h5 id="detail-umur"></h5>
+          <table class="table table-borderless">
+            <thead>
+             <tr>
+               <th scope="col">No</th>
+               <th scope="col">Nama</th>
+               <th scope="col">Qty</th>
+               <th scope="col">Harga</th>
+               <th scope="col">Total</th>
+             </tr>
+            </thead>
+            <tbody id="detail-pembayaran">
+
+
+            </tbody>
+            </table>
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn grey btn-danger" data-dismiss="modal">Batal</button>
+				<button type="button" id="simpan" class="btn btn-success">Simpan & Cetak</button>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
 @endsection
 @section('script')
 <script>
@@ -114,26 +151,69 @@
   const totalBayar = document.querySelector('#total-bayar');
   const tunai = document.querySelector('#tunai');
   const kembali = document.querySelector('#kembali');
+  const detailPemabayaran = document.querySelector('#detail-pembayaran');
+  const selesai = document.querySelector('#selesai');
+  const namaPembeli = document.querySelector('#nama-pembeli');
+  const umur = document.querySelector('#umur');
+  const simpan = document.querySelector('#simpan');
+  const detailNama = document.querySelector('#detail-nama');
+  const detailUmur = document.querySelector('#detail-umur');
+  const modalBody = document.querySelector('.modal-body');
+  const modalFooter = document.querySelector('.modal-footer');
+  const url = '{{config('app.url')}}';
 
-  tunai.addEventListener('input', function(){
-    // console.log(total());
-    if(this.value === '' || total() < 1){
-      totalBayar.innerText = '-'
-      kembali.innerText = '-'
-    }else if (this.value >= total()) {
-      totalBayar.innerText = rupiah(this.value);
-      kembali.innerText = rupiah(total() - this.value);
-    }else {
-      totalBayar.innerText = rupiah(this.value);
-      kembali.innerText = '-'
+  simpan.addEventListener('click', async function(){
+    const data = {
+      nama_pembeli: namaPembeli.value,
+      umur : umur.value,
+      total_bayar: tunai.value,
+      id_kasir: '{{Auth::user()->id}}',
+      obats: daftarObat
     }
+    try {
+      modalBody.innerHTML = `
+      <div class="text-center mt-2">
+        <div class="spinner-border text-success" style="width: 8rem; height: 8rem;" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <h3 class="mt-2"> Sedang Menyimpan Data </h3>
+      </div>`;
+      modalFooter.innerHTML = '';
+
+      const storeData = await fetch(url+'api/kasir/dashboard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        accept: 'application/json',
+        body: JSON.stringify(data)
+      }).then(res => res.json()).then(res => res);
+      if(storeData.status){
+        modalBody.innerHTML = `
+          <div class="text-center mt-2">
+          <svg viewBox="0 0 24 24" width="100" height="100" stroke="#5ed84f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              <h3 class="mt-2"> Success </h3>
+          </svg>
+          <a href="dashboard" type="button" class="btn grey btn-success mt-2">OK</a>
+          </div>`
+      }
+    } catch (e) {
+      alert('error '+e)
+    }
+
+    // setTimeout(function(){
+    //
+    //   modalFooter.innerHTML = `
+    //
+    //   `;
+    // }, 2000);
   })
 
   $('.select2').on('select2:select', async function (e) {
     let tr = ``;
     const id = e.params.data.id;
     if(id > 0){
-    const obat = await fetch('http://localhost:8000/kasir/transaksi/obat/'+id)
+    const obat = await fetch(url+'kasir/transaksi/obat/'+id)
                         .then(res => res.json())
                         .then(res => res);
 
@@ -195,6 +275,53 @@
     }
   });
 
+  tunai.addEventListener('input', function(){
+    // console.log(total());
+    if(this.value === '' || total() < 1){
+      totalBayar.innerText = '-'
+      kembali.innerText = '-'
+    }else if (this.value >= total()) {
+      totalBayar.innerText = rupiah(this.value);
+      kembali.innerText = rupiah(total() - this.value);
+    }else {
+      totalBayar.innerText = rupiah(this.value);
+      kembali.innerText = '-'
+    }
+  });
+
+  selesai.addEventListener('click', function(){
+    if(daftarObat.length < 1){
+      alert('tidak ada transaksi');
+    }else if (namaPembeli.value === '' || umur.value === '' || tunai.value === '') {
+      alert('Nama pembeli, Umur & Total bayar tidak boleh kosong');
+    }else if (tunai.value < total()) {
+      alert('Total bayar tidak mencukupi')
+    }
+    else {
+      let trModal = ``;
+      detailNama.innerText = `Nama : ${namaPembeli.value}`
+      detailUmur.innerText = `Umur : ${umur.value}`
+      this.dataset.target = '#default';
+      daftarObat.map((p, i) => trModal += tampilDetail(p, i));
+      trModal += `<tr>
+          <td colspan="3"></td>
+          <td>Total Harga</td>
+          <td>Rp. ${rupiah(total())}</td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td>Total Bayar</td>
+          <td>Rp. ${rupiah(tunai.value)}</td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td>Kembali</td>
+          <td>Rp. ${rupiah(total() - tunai.value)}</td>
+        </tr>`
+      detailPemabayaran.innerHTML = trModal
+    }
+  })
+
   function hapus(i){
     let deleteRow = ``;
     daftarObat.splice(i, 1);
@@ -243,6 +370,18 @@
           </button>
         </td>
       </tr>`
+  }
+
+  function tampilDetail(p, i){
+    return `
+    <tr>
+      <th scope="row">${i+1}</th>
+      <td>${p.nama_produk}</td>
+      <td>${p.qty}</td>
+      <td>Rp. ${rupiah(p.harga)}</td>
+      <td>Rp. ${rupiah(p.harga * p.qty)}</td>
+    </tr>
+    `
   }
 
 
