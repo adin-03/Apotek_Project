@@ -7,18 +7,7 @@
         </div>
         <div class="content-header-right col-md-8 col-12">
             <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/dashboard">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/merk">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/obat">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/transaksi">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
+
             </div>
         </div>
     </div>

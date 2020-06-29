@@ -43,7 +43,7 @@
                   								<th width="10%">Harga</th>
                   								<th width="40%">Qty</th>
                   								<th width="5%">Total</th>
-                                  <th width="5%">Stok</th>
+                                                <th width="5%">Stok</th>
                   								<th width="5%"></th>
                   							</tr>
                       				</thead>

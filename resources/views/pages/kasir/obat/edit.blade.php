@@ -7,18 +7,7 @@
         </div>
         <div class="content-header-right col-md-8 col-12">
             <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="#">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="#">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="#">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
+
             </div>
         </div>
     </div>

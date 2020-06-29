@@ -7,18 +7,7 @@
         </div>
         <div class="content-header-right col-md-8 col-12">
             <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/dashboard">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/merk">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/obat">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/admin/transaksi">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
+
             </div>
         </div>
     </div>
@@ -44,8 +33,8 @@
 
                                         <button class="btn btn-primary" type="submit"><i class="ft-search"> </i>search</button>
 
-                                        <div class=" ml-1"><a href="{{route('kasir.transaksi.create')}}" class="btn btn-info"><i class="ft-plus"></i>Tambah</a>
-                                        </div>
+                                        {{--<div class=" ml-1"><a href="{{route('kasir.transaksi.create')}}" class="btn btn-info"><i class="ft-plus"></i>Tambah</a>--}}
+                                        {{--</div>--}}
 
                                         <div class="ml-1">
                                             <a href="{{route('kasir.transaksi.cetak_pdf')}}" class="btn btn-primary"
