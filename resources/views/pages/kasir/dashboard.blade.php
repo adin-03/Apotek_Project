@@ -162,52 +162,7 @@
   const modalFooter = document.querySelector('.modal-footer');
   const url = '{{config('app.url')}}';
 
-  simpan.addEventListener('click', async function(){
-    const data = {
-      nama_pembeli: namaPembeli.value,
-      umur : umur.value,
-      total_bayar: tunai.value,
-      id_kasir: '{{Auth::user()->id}}',
-      obats: daftarObat
-    }
-    try {
-      modalBody.innerHTML = `
-      <div class="text-center mt-2">
-        <div class="spinner-border text-success" style="width: 8rem; height: 8rem;" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-        <h3 class="mt-2"> Sedang Menyimpan Data </h3>
-      </div>`;
-      modalFooter.innerHTML = '';
 
-      const storeData = await fetch(url+'api/kasir/dashboard', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        accept: 'application/json',
-        body: JSON.stringify(data)
-      }).then(res => res.json()).then(res => res);
-      if(storeData.status){
-        modalBody.innerHTML = `
-          <div class="text-center mt-2">
-          <svg viewBox="0 0 24 24" width="100" height="100" stroke="#5ed84f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              <h3 class="mt-2"> Success </h3>
-          </svg>
-          <a href="dashboard" type="button" class="btn grey btn-success mt-2">OK</a>
-          </div>`
-      }
-    } catch (e) {
-      alert('error '+e)
-    }
-
-    // setTimeout(function(){
-    //
-    //   modalFooter.innerHTML = `
-    //
-    //   `;
-    // }, 2000);
-  })
 
   $('.select2').on('select2:select', async function (e) {
     let tr = ``;
@@ -289,6 +244,46 @@
     }
   });
 
+  simpan.addEventListener('click', async function(){
+    const data = {
+      nama_pembeli: namaPembeli.value,
+      umur : umur.value,
+      total_bayar: tunai.value,
+      id_kasir: '{{Auth::user()->id}}',
+      obats: daftarObat
+    }
+    try {
+      modalBody.innerHTML = `
+      <div class="text-center mt-2">
+        <div class="spinner-border text-success" style="width: 8rem; height: 8rem;" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <h3 class="mt-2"> Sedang Menyimpan Data </h3>
+      </div>`;
+      modalFooter.innerHTML = '';
+
+      const storeData = await fetch(url+'api/kasir/dashboard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        accept: 'application/json',
+        body: JSON.stringify(data)
+      }).then(res => res.json()).then(res => res);
+      if(storeData.status){
+        modalBody.innerHTML = `
+          <div class="text-center mt-2">
+          <svg viewBox="0 0 24 24" width="100" height="100" stroke="#5ed84f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              <h3 class="mt-2"> Success </h3>
+          </svg>
+          <a href="dashboard" type="button" class="btn grey btn-success mt-2">OK</a>
+          </div>`
+      }
+    } catch (e) {
+      alert('error '+e)
+    }
+  });
+
   selesai.addEventListener('click', function(){
     if(daftarObat.length < 1){
       alert('tidak ada transaksi');
@@ -360,10 +355,10 @@
           <td class="align-middle">${o.satuan}</td>
           <td class="align-middle">${rupiah(o.harga)}</td>
           <td class="align-middle">
-            <input type="number" id="qty" value="${o.qty}" data-harga="${o.harga}" data-index="${i}" data-stok="${o.stok}" class="form-control input-sm" min="1" max="${o.stok}" name="stok">
+            <input type="number" id="qty" value="${o.qty}" data-harga="${o.harga}" data-index="${i}" data-stok="${o.sisa_stok}" class="form-control input-sm" min="1" max="${o.sisa_stok}" name="stok">
           </td>
           <td class="align-middle"> <span id="sub-total"> ${rupiah(o.harga * o.qty)} <span> </td>
-          <td class="align-middle">${o.stok}</td>
+          <td class="align-middle">${o.sisa_stok}</td>
           <td class="align-middle">
           <button class="btn btn-danger btn-sm" type="button" onclick="hapus(${i})" name="button">
             Hapus
