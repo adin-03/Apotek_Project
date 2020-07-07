@@ -57,7 +57,7 @@
                                 <div class="text-center mb-1">
                                     <img src="{{asset('assets/app-assets/images/logo/000.png')}}" alt="branding logo">
                                 </div>
-                                <div class="font-large-1  text-center">Apotek Login</div>
+                                <div class="font-large-1  text-center">Apotek Cemara</div>
                             </div>
                             <div class="card-content">
 

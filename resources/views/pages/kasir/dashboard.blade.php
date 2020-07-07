@@ -19,10 +19,17 @@
             <div class="card">
                 <div class="col-md-12">
                   <div class="card-body">
+                      @if ($message = Session::get('success'))
+                          <div class="alert alert-success">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span
+                                          aria-hidden="true">×</span> </button>
+                              <h3 class="text-success"><i class="fa fa-check-circle"></i> Success</h3> {{ $message }}
+                          </div>
+                      @endif
                   <div class="row">
                     <div class="col-12 col-md-6 col-xs-12 mb-2">
                       <select class="select2 form-control" id="data-obat">
-                        <option value="0" selected="selected">--PIlih Obat--</option>
+                        <option value="0" selected="selected">--PIlih Produk--</option>
                         @foreach($obats as $obat)
                         <option value="{{$obat->id}}">{{$obat->nama_produk}} / {{$obat->satuan}}</option>
                         @endforeach
@@ -37,8 +44,8 @@
                   							<tr>
                   								<th width="5%">No</th>
                   								<!-- <th width="5%">Kode</th> -->
-                  								<th width="20%">Nama</th>
-                  								<th width="20%">Merk</th>
+                  								<th width="20%">Nama Produk</th>
+                  								<th width="20%">Label</th>
                   								<th width="10%">Satuan</th>
                   								<th width="10%">Harga</th>
                   								<th width="40%">Qty</th>

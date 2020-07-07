@@ -3,7 +3,7 @@
     <div class="content-wrapper-before"></div>
     <div class="content-header row">
         <div class="content-header-left col-md-4 col-12 mb-2">
-            <h3 class="content-header-title">Tambah Obat</h3>
+            <h3 class="content-header-title">Tambah Produk</h3>
         </div>
     </div>
     <div class="content-body"><!-- Basic Inputs start -->
@@ -16,7 +16,7 @@
                                 <form action="{{route('apotek.obat.store')}}" method="post">
                                     @csrf
                                     <div class="form-group">
-                                        <label>Merk</label>
+                                        <label>Label</label>
                                         <select class="form-control" name="id_merk">
                                             @foreach($datas as $data)
                                                 <option value="{{$data->id}}">{{$data->merk}}</option>
@@ -43,6 +43,8 @@
                                                 <option value="Tablet">Tablet</option>
                                                 <option value="Strip">Strip</option>
                                                 <option value="Kapsul">Kapsul</option>
+                                                <option value="Tube">Tube</option>
+                                                <option value="Sachet">Sachet</option>
                                             </select>
                                         </div>
                                       </div>
@@ -53,7 +55,7 @@
                             										<div class="input-group-prepend">
                             											<span class="input-group-text">Rp.</span>
                             										</div>
-                            										<input type="telp" minlength="4" class="form-control" placeholder="Masukan Harga" name="harga" required>
+                            										<input type="telp" minlength="3" class="form-control" placeholder="Masukan Harga" name="harga" required>
                             									</div>
                                               @if ($errors->has('harga'))
                                                   <span class="invalid-feedback" role="alert">

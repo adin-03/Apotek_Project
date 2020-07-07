@@ -25,7 +25,8 @@ class AuthKasirController extends Controller
         ];
 
         if (Auth::guard('kasir')->attempt($credentials, $request->member)) {
-            return redirect()->route('kasir.dashboard');
+            $user = Auth::guard('kasir')->user();
+            return redirect()->route('kasir.dashboard')->with('success', 'selamat datang '.$user->nama.'');
         }
 
         return redirect()->back()->withInput($request->only('email'))->with('error', 'username dan password salah');

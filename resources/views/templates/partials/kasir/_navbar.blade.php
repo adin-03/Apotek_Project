@@ -19,7 +19,7 @@
                               <span class="avatar avatar-online">
                                 <span class="user-name text-bold-700 ml-1">{{Auth::user()->nama}}</span>
                               </span></a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href=""><i class="ft-user"></i>Edit Profil</a>
+                                {{--<div class="dropdown-divider"></div><a class="dropdown-item" href=""><i class="ft-user"></i>Edit Profil</a>--}}
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('kasir.logout') }}">
                                     <i class="ft-power"></i>

@@ -3,22 +3,11 @@
     <div class="content-wrapper-before"></div>
     <div class="content-header row">
         <div class="content-header-left col-md-4 col-12 mb-2">
-            <h3 class="content-header-title">Tambah Merk</h3>
+            <h3 class="content-header-title">Tambah Label</h3>
         </div>
         <div class="content-header-right col-md-8 col-12">
             <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/dashboard">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/merk">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/obat">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/transaksi">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
+
             </div>
         </div>
     </div>
@@ -32,9 +21,9 @@
                                 <form action="{{route('apotek.merk.store')}}" method="post">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="">Merk</label>
+                                        <label for="">Label</label>
                                         <input type="text" class="form-control {{$errors->has('merk')?'is-invalid':''}}"
-                                               placeholder="Masukkan Nama Merk" name="merk">
+                                               placeholder="Masukkan Label" name="merk">
                                         @if ($errors->has('merk'))
                                             <span class="invalid-feedback" role="alert">
                                                         <p><b>{{ $errors->first('merk') }}</b></p>

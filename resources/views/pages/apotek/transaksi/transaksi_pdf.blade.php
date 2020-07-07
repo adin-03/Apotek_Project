@@ -39,18 +39,24 @@
             <td>{{$loop->iteration}}</td>
             <td>{{$transaksi->no_transaksi}}</td>
             <td>
-                @foreach($transaksi->transaksiobats as $transaksiobat)
+                @foreach($transaksi->obats as $transaksiobat)
                     {{$transaksiobat->obat->nama_produk}}
                     / {{$transaksiobat->kuantitas}} {{$transaksiobat->obat->satuan}}<br/>
                 @endforeach
             </td>
             <td>{{$transaksi->nama_pembeli}}</td>
             <td>{{$transaksi->umur. ' Tahun'}}</td>
-            <td> @foreach($transaksi->transaksiobats as $transaksiobat)
+            <td>
+                @foreach($transaksi->obats as $transaksiobat)
                     {{'Rp. '.number_format($transaksiobat->obat->harga)}}<br/>
                 @endforeach
             </td>
-            <td>{{'Rp. '.number_format($transaksi->total_harga_keseluruhan)}}</td>
+
+            <td>
+                @foreach($transaksi->obats as $transaksiobat)
+                    {{'Rp. '.number_format($transaksiobat->total)}}<br/>
+                @endforeach
+            </td>
         </tr>
     @endforeach
     </tbody>

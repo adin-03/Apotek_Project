@@ -11,13 +11,15 @@
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <li class="nav-item"><a class="@if(Request::is('apotek/dashboard')) active @endif" href="{{route('apotek.dashboard')}}"><i class="ft-pie-chart"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
             </li>
-            <li class="nav-item"><a class="@if(Request::is('apotek/merk') || Request::is('apotek/merk/*'))  active @endif" href="{{route('apotek.merk.index')}}"><i class="ft-life-buoy"></i><span class="menu-title" data-i18n="">Merk</span></a>
+            <li class="nav-item"><a class="@if(Request::is('apotek/merk') || Request::is('apotek/merk/*'))  active @endif" href="{{route('apotek.merk.index')}}"><i class="ft-life-buoy"></i><span class="menu-title" data-i18n="">Label</span></a>
             </li>
-            <li class="nav-item"><a class="@if(Request::is('apotek/obat') || Request::is('apotek/obat/*')) active @endif" href="{{route('apotek.obat.index')}}"><i class="ft-briefcase"></i><span class="menu-title" data-i18n="">Obat</span></a>
+            <li class="nav-item"><a class="@if(Request::is('apotek/obat') || Request::is('apotek/obat/*')) active @endif" href="{{route('apotek.obat.index')}}"><i class="ft-briefcase"></i><span class="menu-title" data-i18n="">Produk</span></a>
             </li>
             <li class="nav-item"><a class="@if(Request::is('apotek/transaksi')) active @endif" href="{{route('apotek.transaksi.index')}}"><i class="ft-shopping-cart"></i><span class="menu-title" data-i18n="">Transaksi</span></a>
             </li>
-            <li class="nav-item"><a class="@if(Request::is('apotek/managment')) active @endif" href="{{route('apotek.karyawan.index')}}"><i class="ft-users"></i><span class="menu-title" data-i18n="">Managment</span></a>
+            <li class="nav-item"><a class="@if(Request::is('apotek/managment')) active @endif" href="{{route('apotek.karyawan.index')}}"><i class="ft-users"></i><span class="menu-title" data-i18n="">Karyawan</span></a>
+            </li>
+            <li class="nav-item"><a class="@if(Request::is('apotek/history')) active @endif" href="#"><i class="ft-server"></i><span class="menu-title" data-i18n="">History</span></a>
             </li>
         </ul>
     </div>

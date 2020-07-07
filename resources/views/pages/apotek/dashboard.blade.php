@@ -39,7 +39,7 @@
               <path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"></path>
             </svg>
             <h2 class="card-text mt-2 text-white"> <strong>{{$merk}}</strong></h2>
-            <h3 class="card-text">Total Merk</h3>
+            <h3 class="card-text">Total Label</h3>
           </div>
         </div>
       </div>
@@ -74,4 +74,11 @@
       </div>
     </div>
     </div>
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span
+                        aria-hidden="true">×</span> </button>
+            <h3 class="text-success"><i class="fa fa-check-circle"></i> Success</h3> {{ $message }}
+        </div>
+    @endif
 @endsection

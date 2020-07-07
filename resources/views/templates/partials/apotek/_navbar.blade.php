@@ -21,7 +21,7 @@
                                   <span class="user-name text-bold-700">{{Auth::user()->nama}}</span>
                                 </span>
                               </a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href=""><i class="ft-user"></i>Edit Profil</a>
+                                {{--<div class="dropdown-divider"></div><a class="dropdown-item" href=""><i class="ft-user"></i>Edit Profil</a>--}}
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('apotek.logout') }}">
                                     <i class="ft-power"></i>

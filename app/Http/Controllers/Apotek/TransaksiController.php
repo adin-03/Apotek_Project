@@ -26,16 +26,27 @@ class TransaksiController extends Controller
 
     public function index()
     {
-        $search_bulan = 0;
+        $search_bulan = Carbon::now()->month-1;
+        $search_tahun = Carbon::now()->year;
         $transaksis = Transaksi::all();
-        return view('pages.apotek.transaksi.index', compact(['transaksis', 'search_bulan']));
+        return view('pages.apotek.transaksi.index', compact(['transaksis', 'search_bulan', 'search_tahun']));
     }
 
-    public function cetak_pdf()
+    public function cetak_pdf(Request $request)
     {
-        $transaksis = Transaksi::all();
+        $bulan_satu = $request->print_bulan + 1;
+
+        $transaksis = Transaksi::with('obats')->whereMonth('created_at', '>=', $bulan_satu)
+        ->whereMonth('created_at', '<=', $bulan_satu + 2)
+        ->whereYear('created_at', $request->print_tahun)->get();
+
+        $search_bulan = $request->search_bulan_1;
+        $search_tahun = $request->search_tahun;
+
         $pdf = PDF::loadview('pages.apotek.transaksi.transaksi_pdf', compact('transaksis'));
         return $pdf->stream();
+
+
     }
 
     /**
@@ -156,20 +167,24 @@ class TransaksiController extends Controller
     public function search(Request $request)
     {
         $bulan_satu = $request->search_bulan_1 + 1;
-        $ts = TransaksiObat::whereMonth('created_at', '>=', $bulan_satu)
-            ->whereMonth('created_at', '<=', $bulan_satu + 3)->get();
+        $ts = TransaksiObat::whereHas('transaksi', function($query) use($bulan_satu, $request){
+            $query->whereMonth('created_at', '>=', $bulan_satu)
+            ->whereMonth('created_at', '<=', $bulan_satu + 2)
+            ->whereYear('created_at', $request->search_tahun);
+        })->get();
 
         $results = $ts->groupBy('id_obat')->map(function ($row){
             return $row->sum('kuantitas');
         });
 
-        $total_harga_perproduk = $ts->groupBy('id_obat')->map(function ($row){
-            return $row->sum('total_harga_perproduk');
-        });
 
+        $total_harga_perproduk = $ts->groupBy('id_obat')->map(function ($row){
+            return $row->sum('total');
+        });
         $obats = Obat::all();
 
         $search_bulan = $request->search_bulan_1;
-        return view('pages.apotek.transaksi.search', compact(['obats', 'results', 'search_bulan', 'total_harga_perproduk']));
+        $search_tahun = $request->search_tahun;
+        return view('pages.apotek.transaksi.search', compact(['obats', 'results', 'search_bulan', 'search_tahun', 'total_harga_perproduk']));
     }
 }

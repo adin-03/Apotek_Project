@@ -14,11 +14,11 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        Admin::create([
-            'nama' => 'Administrator',
-            'email' => 'admin@mail.com',
-            'password' => bcrypt(12345678)
-        ]);
+//        Admin::create([
+//            'nama' => 'Administrator',
+//            'email' => 'admin@mail.com',
+//            'password' => bcrypt(12345678)
+//        ]);
 
        $apotek = Apotek::create([
             'nama' => 'Apotek Cemara',
@@ -30,6 +30,7 @@ class AdminSeeder extends Seeder
             'nama' => 'Dahlia W',
             'email' => 'dahliaw@mail.com',
             'password' => bcrypt(12345678),
+            'alamat' => 'Jl Srikandi Desa Kedokan sayang kab Tegal',
             'id_apotek' => $apotek->id
         ]);
     }

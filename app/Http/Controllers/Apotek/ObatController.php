@@ -66,7 +66,7 @@ class ObatController extends Controller
         $data->stok = $request->stok;
         $data->sisa_stok = $request->stok;
         $data->save();
-        return redirect()->route('apotek.obat.index');
+        return redirect()->route('apotek.obat.index')->with('success', "Berhasil Menambahkan Data Obat $data->nama_produk!");
     }
 
     /**
@@ -103,7 +103,7 @@ class ObatController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'nama_produk' => 'required|unique:obats',
+            'nama_produk' => 'string|required',
             'satuan' => 'string|required',
             'harga' => 'numeric|required',
             'stok' => 'numeric|required'
@@ -115,12 +115,13 @@ class ObatController extends Controller
 
 
         $obats = Obat::find($id);
+        $obats->id_merk = $request->id_merk;
         $obats->nama_produk = $request->nama_produk;
         $obats->satuan = $request->satuan;
         $obats->harga = $request->harga;
         $obats->stok = $request->stok;
-        $obats->save();
-        return redirect()->route('apotek.obat.index');
+        $obats->update();
+        return redirect()->route('apotek.obat.index')->with('success', "Berhasil Mengupdate Data Obat $obats->nama_produk!");
     }
 
     /**
@@ -133,6 +134,6 @@ class ObatController extends Controller
     {
         $obats = Obat::find($id);
         $obats->delete();
-        return redirect()->route('apotek.obat.index');
+        return redirect()->route('apotek.obat.index')->with('success', "Berhasil Menghapus Data Obat $obats->nama_produk!");
     }
 }

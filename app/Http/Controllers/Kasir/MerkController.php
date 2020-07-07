@@ -52,7 +52,7 @@ class MerkController extends Controller
         $data = new Merk();
         $data->merk = $request->merk;
         $data->save();
-        return redirect()->route('kasir.merk.index');
+        return redirect()->route('kasir.merk.index')->with(['success' => "Data merek dengan nama $data->merek berhasil ditambahkan"]);
     }
 
     /**

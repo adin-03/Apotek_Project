@@ -24,7 +24,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Kode</th>
-                                            <th>Id Merk</th>
+                                            <th>Id Label</th>
                                             <th>Nama Produk</th>
                                             <th>Satuan</th>
                                             <th>Harga</th>

@@ -27,7 +27,8 @@ class AuthApotekController extends Controller
         ];
 
         if (Auth::guard('apotek')->attempt($credentials, $request->member)) {
-            return redirect()->route('apotek.dashboard');
+            $user = Auth::guard('apotek')->user();
+            return redirect()->route('apotek.dashboard')->with('success', 'selamat datang '.$user->nama.'');
         }
 
         return redirect()->back();

@@ -3,7 +3,7 @@
     <div class="content-wrapper-before"></div>
     <div class="content-header row">
         <div class="content-header-left col-md-4 col-12 mb-2">
-            <h3 class="content-header-title">Data Merk</h3>
+            <h3 class="content-header-title">Data Label</h3>
         </div>
     </div>
     <div class="content-body"><!-- DOM - jQuery events table -->
@@ -13,14 +13,24 @@
                     <div class="card">
                         <div class="card-content collapse show">
                             <div class="card-body card-dashboard">
+
                                 <a type="button" class="btn btn-primary btn-min-width mr-1 mb-1" href="{{route('apotek.merk.create')}}">
                                     <i class="ft-plus"></i>Tambah</a>
+
+                                @if ($message = Session::get('success'))
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span
+                                                    aria-hidden="true">×</span> </button>
+                                        <h3 class="text-success"><i class="fa fa-remove-circle"></i> Error</h3> {{ $message }}
+                                    </div>
+                                @endif
+
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered dom-jQuery-events">
                                         <thead>
                                         <tr>
                                             <td>No</td>
-                                            <td>Merk</td>
+                                            <td>Label</td>
                                             <td align="center">Action</td>
                                         </tr>
                                         </thead>

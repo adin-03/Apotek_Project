@@ -11,11 +11,11 @@
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <li class=" nav-item"><a class="@if(Request::is('kasir/dashboard')) active @endif" href="{{route('kasir.dashboard')}}"><i class="ft-shopping-cart"></i><span class="menu-title" data-i18n="">Kasir</span></a></li>
 
-            <li class=" nav-item"><a href="{{route('kasir.merk.index')}}"><i class="ft-life-buoy"></i><span class="menu-title" data-i18n="">Merk</span></a></li>
+            {{--<li class=" nav-item"><a href="{{route('kasir.merk.index')}}"><i class="ft-life-buoy"></i><span class="menu-title" data-i18n="">Merk</span></a></li>--}}
 
-            <li class=" nav-item"><a href="{{route('kasir.obat.index')}}"><i class="ft-folder"></i><span class="menu-title" data-i18n="">Obat</span></a></li>
+            <li class=" nav-item"><a href="{{route('kasir.obat.index')}}"><i class="ft-folder"></i><span class="menu-title" data-i18n="">Produk</span></a></li>
 
-            <li class=" nav-item"><a href="{{route('kasir.transaksi.index')}}"><i class="ft-credit-card"></i><span class="menu-title" data-i18n="">Transaksi</span></a></li>
+            {{--<li class=" nav-item"><a href="{{route('kasir.transaksi.index')}}"><i class="ft-credit-card"></i><span class="menu-title" data-i18n="">Transaksi</span></a></li>--}}
 
             {{--<li class=" nav-item"><a href="index.html"><i class="ft-home"></i><span class="menu-title" data-i18n="">Dashboard</span><span class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
                 <ul class="menu-content">

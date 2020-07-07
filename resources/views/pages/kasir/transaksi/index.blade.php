@@ -63,7 +63,9 @@
                                          <td>{{$transaksi->umur}} Th</td>
                                          <td>{{$transaksi->created_at->format('d m Y H:i')}}</td>
                                          <td>
-                                           <button class="btn btn-info btn-sm" data-toggle="collapse" data-target="#collapse{{$transaksi->id}}" aria-expanded="false" aria-controls="collapseA1">
+                                           <button class="btn btn-info btn-sm" data-toggle="collapse"
+                                                   data-target="#collapse{{$transaksi->id}}" aria-expanded="false"
+                                                   aria-controls="collapseA1">
 										                            Detail ({{count($transaksi->obats)}} Produk)
 									                          </button>
                                          </td>

@@ -43,16 +43,18 @@ class MerkController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-           'merk' => 'required|unique:merks'
+           'merk' => 'required|unique:merks|min:30'
         ],[
             'required' => ':attribute Tidak Boleh Kosong',
-            'unique' => ':attribute Sudah ada'
+            'unique' => ':attribute Sudah ada',
+            'min' => ':attribute minimal :min karakter'
         ]);
 
         $data = new Merk();
         $data->merk = $request->merk;
         $data->save();
-        return redirect()->route('apotek.merk.index');
+        return redirect()->route('apotek.merk.index')->with('success', "Berhasil Menambahkan Data merk $data->merk!");
+        
     }
 
     /**
@@ -98,7 +100,7 @@ class MerkController extends Controller
         $merks = Merk::find($id);
         $merks->merk = $request->merk;
         $merks->save();
-        return redirect()->route('apotek.merk.index');
+        return redirect()->route('apotek.merk.index')->with('success', "Berhasil Mengupdate Data merk $merks->merk!");
     }
 
     /**
@@ -111,6 +113,6 @@ class MerkController extends Controller
     {
         $merks = Merk::find($id);
         $merks->delete();
-        return redirect()->route('apotek.merk.index');
+        return redirect()->route('apotek.merk.index')->with('success', "Berhasil Menghapus Data merk $merks->merk!");
     }
 }

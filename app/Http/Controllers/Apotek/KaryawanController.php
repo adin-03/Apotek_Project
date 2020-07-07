@@ -43,7 +43,7 @@ class KaryawanController extends Controller
         $karyawan->email = $request->email;
         $karyawan->password = Hash::make($request->password);
         $karyawan->save();
-        return redirect()->route('apotek.karyawan.index');
+        return redirect()->route('apotek.karyawan.index')->with('success', "Berhasil Menambahkan Data Karyawan $karyawan->nama!");
     }
 
     public function show($id)
@@ -73,13 +73,13 @@ class KaryawanController extends Controller
         $kasirs->email = $request->email;
         $kasirs->password = $request->password;
         $kasirs->save();
-        return redirect()->route('apotek.karyawan.index');
+        return redirect()->route('apotek.karyawan.index')->with('success', "Berhasil Mengupdate Data kasir $kasirs->nama!");
     }
 
     public function destroy($id)
     {
         $kasirs = Kasir::find($id);
         $kasirs->delete();
-        return redirect()->route('apotek.karyawan.index');
+        return redirect()->route('apotek.karyawan.index')->with('success', "Berhasil Menghapus Data Karyawan $kasirs->nama!");
     }
 }

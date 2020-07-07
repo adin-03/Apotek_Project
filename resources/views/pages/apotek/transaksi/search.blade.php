@@ -3,22 +3,11 @@
     <div class="content-wrapper-before"></div>
     <div class="content-header row">
         <div class="content-header-left col-md-4 col-12 mb-2">
-            <h3 class="content-header-title">Data obat</h3>
+            <h3 class="content-header-title">Data Transaksi</h3>
         </div>
         <div class="content-header-right col-md-8 col-12">
             <div class="breadcrumbs-top float-md-right">
-                <div class="breadcrumb-wrapper mr-1">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/dashboard">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/merk">Merk</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/obat">Obat</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="http://localhost:8000/apotek/transaksi">Transaksi</a>
-                        </li>
-                    </ol>
-                </div>
+
             </div>
         </div>
     </div>
@@ -29,24 +18,42 @@
                     <div class="card">
                         <div class="card-content collapse show">
                             <div class="card-body card-dashboard">
-                                <form action="{{route('apotek.transaksi.search')}}" method="get">
-                                    @csrf
-                                    <p>Filter Transaksi Pertiga bulan, dimulai dari bulan :</p>
-                                    <div class="row">
-                                        @php($bulan = ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'])
-                                        <select class="form-control col-md-3 mr-2 ml-3" name="search_bulan_1">
-                                            @for($i = 0; $i < count($bulan); $i++)
-                                                <option value="{{$i}}" {{ $search_bulan == $i ? 'selected' : '' }}>{{$bulan[$i]}}</option>
-                                            @endfor
-                                        </select>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <form action="{{route('apotek.transaksi.search')}}" method="get">
+                                            @csrf
+                                            <p>Filter Transaksi Pertiga bulan, dimulai dari bulan :</p>
+                                            <div class="row">
+                                                @php($bulan = ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'])
+                                                <select class="form-control col-md-3 mr-2 ml-3" name="search_bulan_1">
+                                                    @for($i = 0; $i < count($bulan); $i++)
+                                                        <option value="{{$i}}" {{ $search_bulan == $i ? 'selected' : '' }}>{{$bulan[$i]}}</option>
+                                                    @endfor
+                                                </select>
 
-                                        <button class="btn btn-primary" type="submit">search</button>
+                                                @php($tahun = ['2017', '2018', '2019', '2020', '2021', '2022'])
+                                                <select name="search_tahun" class="form-control col-md-3 mr-2">
+                                                    @for ($i = 0; $i < count($tahun); $i++)
+                                                        <option value="{{ $tahun[$i] }}" {{ $search_tahun == $tahun[$i] ? 'selected' : '' }}>{{ $tahun[$i] }}</option>
+                                                    @endfor
+                                                </select>
+                                                <button class="btn btn-primary" type="submit">search</button>
 
+                                            </div>
+                                        </form>
                                     </div>
-                                </form>
+                                    <div class="col-md-3">
+                                        <form action="{{ route('apotek.transaksi.cetak_pdf') }}" method="get">
+                                            <input id="print-bulan" name="print_bulan" type="hidden">
+                                            <input id="print-tahun" name="print_tahun" type="hidden">
+                                            <button class="btn btn-primary" type="submit" target="_blank"> <i class="ft-printer"></i> Cetak</button>
+                                        </form>
+                                    </div>
+                                </div>
+
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered dom-jQuery-events">
-                                        @if($results)
+                                        @if(count($results) > 0)
                                             <thead>
                                             <tr>
                                                 <th>No</th>
@@ -58,18 +65,14 @@
                                             <tbody>
 
                                             @foreach($obats as $key => $obat)
-
-                                                {{--{{dd(['key' => $key, 'obat' => $obat->nama_produk], $results)}}--}}
-
+                                                @if(isset($results[$key+1]) > 0)
                                                 <tr>
                                                     <td>{{$loop->iteration}}</td>
                                                     <td>{{$obat->nama_produk}}</td>
-
-
-                                                    <td>{{isset($results[$key+1]) ? $results[$key+1] : 0}} {{$obat->satuan}}</td>
-                                                    <td>{{isset($total_harga_perproduk[$key+1]) ? 'Rp. '. number_format($total_harga_perproduk[$key+1]) : 'Rp. '. 0}}</td>
-
+                                                    <td>{{ isset($results[$key+1]) ?  $results[$key+1] .' '. $obat->satuan : '' }}</td>
+                                                    <td>{{isset($total_harga_perproduk[$key+1]) ? 'Rp. '. number_format($total_harga_perproduk[$key+1]) : ''}}</td>
                                                 </tr>
+                                                @endif
                                             @endforeach
                                             </tbody>
                                         @else
