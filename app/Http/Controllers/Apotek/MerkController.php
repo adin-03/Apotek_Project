@@ -43,18 +43,18 @@ class MerkController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-           'merk' => 'required|unique:merks|min:30'
+           'merk' => 'required|unique:merks|max:30'
         ],[
-            'required' => ':attribute Tidak Boleh Kosong',
-            'unique' => ':attribute Sudah ada',
-            'min' => ':attribute minimal :min karakter'
+            'merk.required' => 'label Tidak Boleh Kosong',
+            'merk.unique' => 'label Sudah ada',
+            'merk.min' => 'label minimal :max karakter'
         ]);
 
         $data = new Merk();
         $data->merk = $request->merk;
         $data->save();
         return redirect()->route('apotek.merk.index')->with('success', "Berhasil Menambahkan Data merk $data->merk!");
-        
+
     }
 
     /**

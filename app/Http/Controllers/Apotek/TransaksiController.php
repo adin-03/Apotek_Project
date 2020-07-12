@@ -46,7 +46,6 @@ class TransaksiController extends Controller
         $pdf = PDF::loadview('pages.apotek.transaksi.transaksi_pdf', compact('transaksis'));
         return $pdf->stream();
 
-
     }
 
     /**
@@ -164,27 +163,41 @@ class TransaksiController extends Controller
     }
 
 
+    // public function search(Request $request)
+    // {
+    //     $bulan_satu = $request->search_bulan_1 + 1;
+    //     $ts = TransaksiObat::whereHas('transaksi', function($query) use($bulan_satu, $request){
+    //         $query->whereMonth('created_at', '>=', $bulan_satu)
+    //         ->whereMonth('created_at', '<=', $bulan_satu + 2)
+    //         ->whereYear('created_at', $request->search_tahun);
+    //     })->get();
+
+    //     $results = $ts->groupBy('id_obat')->map(function ($row){
+    //         return $row->sum('kuantitas');
+    //     });
+
+
+    //     $total_harga_perproduk = $ts->groupBy('id_obat')->map(function ($row){
+    //         return $row->sum('total');
+    //     });
+    //     $obats = Obat::all();
+
+    //     $search_bulan = $request->search_bulan_1;
+    //     $search_tahun = $request->search_tahun;
+    //     return view('pages.apotek.transaksi.search', compact(['obats', 'results', 'search_bulan', 'search_tahun', 'total_harga_perproduk']));
+    // }
+
     public function search(Request $request)
     {
         $bulan_satu = $request->search_bulan_1 + 1;
-        $ts = TransaksiObat::whereHas('transaksi', function($query) use($bulan_satu, $request){
-            $query->whereMonth('created_at', '>=', $bulan_satu)
-            ->whereMonth('created_at', '<=', $bulan_satu + 2)
-            ->whereYear('created_at', $request->search_tahun);
-        })->get();
-
-        $results = $ts->groupBy('id_obat')->map(function ($row){
-            return $row->sum('kuantitas');
-        });
-
-
-        $total_harga_perproduk = $ts->groupBy('id_obat')->map(function ($row){
-            return $row->sum('total');
-        });
-        $obats = Obat::all();
+        $transaksis = Transaksi::whereMonth('created_at', $bulan_satu)
+        ->whereYear('created_at', $request->search_tahun)->get();
 
         $search_bulan = $request->search_bulan_1;
         $search_tahun = $request->search_tahun;
-        return view('pages.apotek.transaksi.search', compact(['obats', 'results', 'search_bulan', 'search_tahun', 'total_harga_perproduk']));
+
+        return view('pages.apotek.transaksi.search', compact(['search_bulan', 'transaksis', 'search_tahun']));
     }
+
+    
 }

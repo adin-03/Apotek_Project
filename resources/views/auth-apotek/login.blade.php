@@ -63,10 +63,10 @@
 
 
                                 @if ($message = Session::get('error'))
-                                    <div class="alert alert-danger">
+                                    <div class="alert alert-warning">
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span
                                                     aria-hidden="true">×</span> </button>
-                                        <h3 class="text-danger"><i class="fa fa-remove-circle"></i> Error</h3> {{ $message }}
+                                        <h3 class="text-danger"><i class="fa ft-alert-triangle"></i> Warning</h3> {{ $message }}
                                     </div>
                                 @endif
 

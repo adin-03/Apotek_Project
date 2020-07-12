@@ -51,19 +51,19 @@ Route::group(['prefix' => 'apotek'], function () {
 
     Route::get('dashboard', 'Apotek\DashboardController@dashboard')->name('apotek.dashboard');
 
-    Route::get('merk', 'Apotek\MerkController@index')->name('apotek.merk.index');
-    Route::get('merk/create', 'Apotek\MerkController@create')->name('apotek.merk.create');
-    Route::post('merk/create', 'Apotek\MerkController@store')->name('apotek.merk.store');
-    Route::get('merk/{id}/edit', 'Apotek\MerkController@edit')->name('apotek.merk.edit');
-    Route::patch('merk/update/{id}', 'Apotek\MerkController@update')->name('apotek.merk.update');
-    Route::get('merk/destroy/{id}', 'Apotek\MerkController@destroy')->name('apotek.merk.destroy');
+    Route::get('label', 'Apotek\MerkController@index')->name('apotek.merk.index');
+    Route::get('label/create', 'Apotek\MerkController@create')->name('apotek.merk.create');
+    Route::post('label/create', 'Apotek\MerkController@store')->name('apotek.merk.store');
+    Route::get('label/{id}/edit', 'Apotek\MerkController@edit')->name('apotek.merk.edit');
+    Route::patch('label/update/{id}', 'Apotek\MerkController@update')->name('apotek.merk.update');
+    Route::get('label/destroy/{id}', 'Apotek\MerkController@destroy')->name('apotek.merk.destroy');
 
-    Route::get('obat', 'Apotek\ObatController@index')->name('apotek.obat.index');
-    Route::get('obat/create', 'Apotek\ObatController@create')->name('apotek.obat.create');
-    Route::post('obat/create', 'Apotek\ObatController@store')->name('apotek.obat.store');
-    Route::get('obat/{id}/edit', 'Apotek\ObatController@edit')->name('apotek.obat.edit');
-    Route::patch('obat/update/{id}', 'Apotek\ObatController@update')->name('apotek.obat.update');
-    Route::get('obat/destroy/{id}', 'Apotek\ObatController@destroy')->name('apotek.obat.destroy');
+    Route::get('produk', 'Apotek\ObatController@index')->name('apotek.obat.index');
+    Route::get('produk/create', 'Apotek\ObatController@create')->name('apotek.obat.create');
+    Route::post('produk/create', 'Apotek\ObatController@store')->name('apotek.obat.store');
+    Route::get('produk/{id}/edit', 'Apotek\ObatController@edit')->name('apotek.obat.edit');
+    Route::patch('produk/update/{id}', 'Apotek\ObatController@update')->name('apotek.obat.update');
+    Route::get('produk/destroy/{id}', 'Apotek\ObatController@destroy')->name('apotek.obat.destroy');
 
     Route::get('transaksi', 'Apotek\TransaksiController@index')->name('apotek.transaksi.index');
     Route::get('transaksi/cetak_pdf', 'Apotek\TransaksiController@cetak_pdf')->name('apotek.transaksi.cetak_pdf');
@@ -76,6 +76,12 @@ Route::group(['prefix' => 'apotek'], function () {
     Route::get('karyawan/{id}/edit', 'Apotek\karyawanController@edit')->name('apotek.karyawan.edit');
     Route::patch('karyawan/update/{id}', 'Apotek\karyawanController@update')->name('apotek.karyawan.update');
     Route::get('karyawan/destroy/{id}', 'Apotek\karyawanController@destroy')->name('apotek.karyawan.destroy');
+
+    Route::get('pelanggan', 'Apotek\PelangganController@index')->name('apotek.pelanggan.index');
+    Route::get('pelanggan/{id}', 'Apotek\PelangganController@histori')->name('apotek.pelanggan.histori');
+
+    Route::get('penjualan', 'Apotek\PenjualanController@index')->name('apotek.penjualan.index');
+    Route::get('penjualan/search', 'Apotek\PenjualanController@search')->name('apotek.penjualan.search');
 });
 
 Route::group(['prefix' => 'kasir'], function () {
@@ -86,6 +92,8 @@ Route::group(['prefix' => 'kasir'], function () {
 
     Route::get('dashboard', 'Kasir\DashboardController@dashboard')->name('kasir.dashboard');
     Route::post('dashboard', 'Kasir\DashboardController@store');
+    Route::post('dashboard/pelanggan/tambah', 'Kasir\DashboardController@tambahPelanggan')->name('kasir.dashboard.tambahpelanggan');
+    Route::get('dashboard/pelanggan/{id}', 'Kasir\DashboardController@ambilPelanggan');
 
     Route::get('merk', 'Kasir\MerkController@index')->name('kasir.merk.index');
     Route::get('transaksi/obat/{id}', 'Kasir\DashboardController@search');

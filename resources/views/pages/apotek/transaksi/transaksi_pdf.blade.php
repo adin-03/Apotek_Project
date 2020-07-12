@@ -6,10 +6,14 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<style type="text/css">
+<style type="text/css" media="all">
     table tr td,
     table tr th {
         font-size: 9pt;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
     }
 </style>
 <center>
@@ -21,7 +25,7 @@
 <p> Nama : Apotek Cemara</p>
 <p> Tanggal : {{\Carbon\Carbon::now()->format('d-m-Y')}}</p>
 
-<table class='table table-bordered'>
+<table class="table table-bordered">
     <thead>
     <tr>
         <th>No</th>
@@ -44,8 +48,8 @@
                     / {{$transaksiobat->kuantitas}} {{$transaksiobat->obat->satuan}}<br/>
                 @endforeach
             </td>
-            <td>{{$transaksi->nama_pembeli}}</td>
-            <td>{{$transaksi->umur. ' Tahun'}}</td>
+            <td>{{$transaksi->pelanggan->nama_pelanggan}}</td>
+            <td>{{$transaksi->pelanggan->umur}} Th</td>
             <td>
                 @foreach($transaksi->obats as $transaksiobat)
                     {{'Rp. '.number_format($transaksiobat->obat->harga)}}<br/>

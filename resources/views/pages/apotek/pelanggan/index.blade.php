@@ -3,7 +3,7 @@
     <div class="content-wrapper-before"></div>
     <div class="content-header row">
         <div class="content-header-left col-md-4 col-12 mb-2">
-            <h3 class="content-header-title">History Transaksi</h3>
+            <h3 class="content-header-title">Data Pelanggan</h3>
         </div>
     </div>
     <div class="content-body"><!-- DOM - jQuery events table -->
@@ -14,8 +14,8 @@
                     <div class="card">
                         <div class="card-content collapse show">
                             <div class="card-body card-dashboard">
-                                <a type="button" class="btn btn-primary btn-min-width mr-1 mb-1" href="{{route('apotek.obat.create')}}">
-                                    <i class="ft-plus"></i>Tambah</a>
+                              {{-- <a type="button" class="btn btn-primary btn-min-width mr-1 mb-1" href="#">
+                                  <i class="ft-plus"></i>Tambah</a> --}}
 
                                 @if ($message = Session::get('success'))
                                     <div class="alert alert-success">
@@ -29,31 +29,26 @@
                                     <table class="table table-striped table-bordered dom-jQuery-events">
                                         <thead>
                                         <tr>
-                                            <td>No</td>
+                                            <td>No Pelanggan</td>
                                             <td>Nama Pelanggan</td>
-                                            <td>Id Pelanggan</td>
+                                            <td>Tanggal Lahir</td>
+                                            <td>Umur</td>
                                             <td align="center">action</td>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($obats as $obat)
+                                        @foreach($pelanggans as $pelanggan)
                                             <tr>
-                                                <th>{{$obat->id}}</th>
-                                                <th>{{$obat->kode_obat}}</th>
-                                                <th>{{$obat->merk->merk}}</th>
-                                                <th>{{$obat->nama_produk}}</th>
-                                                <th>{{$obat->satuan}}</th>
-                                                <th>{{'Rp. '.number_format($obat->harga, 0,',','.')}}</th>
-                                                <th>{{$obat->stok}}</th>
-                                                <th>{{$obat->sisa_stok}}</th>
-                                                <td width="17%">
-                                                    <a class="btn btn-warning btn-sm" href="{{ route('#', $obat->id) }}">
-                                                        <i class="ft-edit"></i>
-                                                    </a>
-                                                    <a class="btn btn-danger btn-sm" href="{{ route('#', $obat->id) }}"
-                                                       onclick="return confirm('Apakah Anda Akan Menghapus  {{$obat->nama_produk}}?')"
+                                                <th>{{$pelanggan->no_pelanggan}}</th>
+                                                <th>{{$pelanggan->nama_pelanggan}}</th>
+                                                <th>{{$pelanggan->tanggal_lahir}}</th>
+                                                <th>{{$pelanggan->umur}}</th>
+                                                <td>
+                                                    <a class="btn btn-danger btn-sm" href="#"
+                                                       onclick="return confirm('Apakah Anda Akan Menghapus data ini?')"
                                                        type="button"> <i class="ft-trash-2"></i>
-                                                    </a>
+                                                     </a>
+                                                     <a href="{{ route('apotek.pelanggan.histori', $pelanggan->id) }}" class="btn btn-info btn-sm">Histori</a>
                                                 </td>
                                             </tr>
                                         @endforeach

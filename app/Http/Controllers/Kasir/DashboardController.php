@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Kasir;
 
 use App\Http\Controllers\Controller;
 use App\Obat;
+use App\Pelanggan;
 use App\TransaksiObat;
 use App\Transaksi;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use DB;
 
@@ -19,7 +21,8 @@ class DashboardController extends Controller
     public function dashboard()
     {
         $obats = Obat::orderBy('nama_produk', 'ASC')->get(['nama_produk','satuan','id']);
-        return view('pages.kasir.dashboard', compact('obats'));
+        $pelanggans = Pelanggan::orderBy('nama_pelanggan', 'ASC')->get();
+        return view('pages.kasir.dashboard', compact('obats', 'pelanggans'));
     }
 
     public function search($id){
@@ -38,8 +41,9 @@ class DashboardController extends Controller
 
       $transaksi = Transaksi::create([
         'no_transaksi' => $no_transaksi,
-        'nama_pembeli' => $request->nama_pembeli,
-        'umur' => $request->umur,
+        'id_pelanggan' => $request->nama_pembeli,
+        //'nama_pembeli' => $request->nama_pembeli,
+        //'umur' => $request->umur,
         'id_kasir' => $request->id_kasir,
         'total_bayar' => $request->total_bayar
       ]);
@@ -64,4 +68,23 @@ class DashboardController extends Controller
         'status' => true,
       ]);
     }
+    public function tambahPelanggan(Request $request)
+    {
+        $pelanggan = new Pelanggan();
+        $pelanggan->no_pelanggan = rand();
+        $pelanggan->nama_pelanggan = ucwords($request->tambah_nama_pelanggan);
+        $pelanggan->tanggal_lahir = $request->tambah_ttl_pelanggan;
+        $pelanggan->umur = Carbon::parse($request->tambah_ttl_pelanggan)->age;
+        $pelanggan->save();
+
+        return redirect()->route('apotek.dashboard');
+    }
+
+    public function ambilPelanggan($id)
+    {
+        $pelanggan = Pelanggan::where('id', $id)->first();
+
+        return $pelanggan;
+    }
+
 }

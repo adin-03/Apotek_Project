@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Kasir;
 
 use App\Http\Controllers\Controller;
 use App\Obat;
+use App\Pelanggan;
 use App\Transaksi;
 use App\TransaksiObat;
 use Barryvdh\DomPDF\Facade as PDF;
@@ -196,4 +197,6 @@ class TransaksiController extends Controller
             $transaksi->no_transaksi = date('d-m-Y').'-1';
         }
     }
+
+    
 }

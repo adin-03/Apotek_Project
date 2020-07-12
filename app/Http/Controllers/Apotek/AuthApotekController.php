@@ -31,7 +31,8 @@ class AuthApotekController extends Controller
             return redirect()->route('apotek.dashboard')->with('success', 'selamat datang '.$user->nama.'');
         }
 
-        return redirect()->back();
+
+        return redirect()->back()->with('error', 'email dan password salah');
     }
 
     public function logout()

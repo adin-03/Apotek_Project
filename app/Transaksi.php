@@ -17,4 +17,9 @@ class Transaksi extends Model
     {
         return $this->belongsTo(Kasir::class, 'id_kasir', 'id');
     }
+
+    public function pelanggan()
+    {
+        return $this->belongsTo(Pelanggan::class, 'id_pelanggan', 'id');
+    }
 }

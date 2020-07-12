@@ -72,8 +72,8 @@
                                             <td width="1%">{{$loop->iteration}}</td>
                                             <td>{{$transaksi->no_transaksi}}</td>
                                             <td>{{$transaksi->kasir->nama}}</td>
-                                            <td>{{$transaksi->nama_pembeli}}</td>
-                                            <td>{{$transaksi->umur}} Th</td>
+                                            <td>{{$transaksi->pelanggan->nama_pelanggan}}</td>
+                                            <td>{{$transaksi->pelanggan->umur}} Th</td>
                                             <td>{{$transaksi->created_at->format('d-m-Y H:i')}}</td>
                                             <td>
                                                 <button class="btn btn-info btn-sm" data-toggle="collapse"

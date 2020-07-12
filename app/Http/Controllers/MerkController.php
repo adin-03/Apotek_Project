@@ -44,8 +44,8 @@ class MerkController extends Controller
         $this->validate($request,[
            'merk' => 'required|unique:merks'
         ],[
-            'required' => ':attribute Tidak Boleh Kosong',
-            'unique' => ':attribute Sudah ada'
+            'merk.required' => 'label Tidak Boleh Kosong',
+            'merk.unique' => 'label Sudah ada'
         ]);
 
         $data = new Merk();
