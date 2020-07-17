@@ -15,6 +15,12 @@
         border: 1px solid black;
         border-collapse: collapse;
     }
+    div.total-harga {
+        position: absolute;
+        right: 0;
+        width: 100px;
+        height: 120px;
+    }
 </style>
 <center>
     <h5>Laporan Transaksi Apotek Cemara</h4>
@@ -52,18 +58,24 @@
             <td>{{$transaksi->pelanggan->umur}} Th</td>
             <td>
                 @foreach($transaksi->obats as $transaksiobat)
-                    {{'Rp. '.number_format($transaksiobat->obat->harga)}}<br/>
+                    {{'Rp. '.number_format($transaksiobat->obat->harga,0,',','.')}}<br/>
                 @endforeach
             </td>
 
             <td>
                 @foreach($transaksi->obats as $transaksiobat)
-                    {{'Rp. '.number_format($transaksiobat->total)}}<br/>
+                    {{'Rp. '.number_format($transaksiobat->total,0,',','.')}}<br/>
                 @endforeach
             </td>
         </tr>
     @endforeach
+        <tr>
+            <td colspan="5"></td>
+            <td>Jumlah</td>
+            <td>{{'Rp. '.number_format($total,0,',','.')}}</td>
+        </tr>
     </tbody>
+
 </table>
 
 </body>

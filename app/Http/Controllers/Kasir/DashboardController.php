@@ -20,54 +20,80 @@ class DashboardController extends Controller
 
     public function dashboard()
     {
-        $obats = Obat::orderBy('nama_produk', 'ASC')->get(['nama_produk','satuan','id']);
+        $obats = Obat::orderBy('nama_produk', 'ASC')->get(['nama_produk', 'satuan', 'id']);
         $pelanggans = Pelanggan::orderBy('nama_pelanggan', 'ASC')->get();
         return view('pages.kasir.dashboard', compact('obats', 'pelanggans'));
     }
 
-    public function search($id){
-      $obat = Obat::with('merk')->where('id', $id)->first();
-      return $obat;
+    public function search($id)
+    {
+        $obat = Obat::with('merk')->where('id', $id)->first();
+        return $obat;
     }
 
-    public function store(Request $request){
-      $no_transaksi = Transaksi::all();
-      if(count($no_transaksi) > 0){
-        $no = substr($no_transaksi->last()->no_transaksi, strpos($no_transaksi->last()->no_transaksi, "-") + 1);
-        $no_transaksi = now()->format('dmY').'-'.($no+1);
-      }else {
-        $no_transaksi = now()->format('dmY').'-1';
-      }
+    public function store(Request $request)
+    {
 
-      $transaksi = Transaksi::create([
-        'no_transaksi' => $no_transaksi,
-        'id_pelanggan' => $request->nama_pembeli,
-        //'nama_pembeli' => $request->nama_pembeli,
-        //'umur' => $request->umur,
-        'id_kasir' => $request->id_kasir,
-        'total_bayar' => $request->total_bayar
-      ]);
+        $no_transaksi = Transaksi::whereDate('created_at', now())->get();
+        if (count($no_transaksi) > 0) {
+            $no = substr($no_transaksi->last()->no_transaksi, strpos($no_transaksi->last()->no_transaksi, "-") + 1);
+            $no += 1;
+            $no_transaksi = Carbon::now()->format('dmY') . '-' . $no;
+        } else {
+            $no_transaksi = Carbon::now()->format('dmY') . '-1';
+        }
 
-      foreach ($request->obats as $obat) {
-        TransaksiObat::create([
-          'id_obat' => $obat['id'],
-          'id_transaksi' => $transaksi->id,
-          'nama_produk' => $obat['nama_produk'],
-          'harga' => $obat['harga'],
-          'kuantitas' => $obat['qty'],
-          'total' => $obat['harga'] * $obat['qty']
+        // $transaksi = new Transaksi();
+        // $transaksi->no_transaksi = $no_transaksi;
+        // $transaksi->id_pelanggan = $request->nama_pembelian;
+        // $transaksi->id_kasir = $request->id_kasir;
+        // $transaksi->total_bayar = $request->total_bayar;
+        // $transaksi->save();
+
+        // foreach ($request->obats as $obat) {
+        //     $transaksiObat = new TransaksiObat();
+        //     $transaksiObat->id_obat = $obat['id'];
+        //     $transaksiObat->id_transaksi = $transaksi->id;
+        //     $transaksiObat->nama_produk = $obat['nama_produk'];
+        //     $transaksiObat->harga = $obat['harga'];
+        //     $transaksiObat->kuantitas = $obat['qty'];
+        //     $transaksiObat->total = $obat['harga'] * $obat['qty'];
+        //     $transaksiObat->save();
+
+        //     $stokObat = Obat::find($obat['id']);
+        //     $stokObat->update(['sisa_stok' => $stokObat->sisa_stok - $obat['qty']]);
+        // }
+
+          $transaksi = Transaksi::create([
+            'no_transaksi' => $no_transaksi,
+            'id_pelanggan' => $request->nama_pembeli,
+            //'nama_pembeli' => $request->nama_pembeli,
+            //'umur' => $request->umur,
+            'id_kasir' => $request->id_kasir,
+            'total_bayar' => $request->total_bayar
+          ]);
+
+          foreach ($request->obats as $obat) {
+            TransaksiObat::create([
+              'id_obat' => $obat['id'],
+              'id_transaksi' => $transaksi->id,
+              'nama_produk' => $obat['nama_produk'],
+              'harga' => $obat['harga'],
+              'kuantitas' => $obat['qty'],
+              'total' => $obat['harga'] * $obat['qty']
+            ]);
+
+            $stokObat = Obat::find($obat['id']);
+            $stokObat->update(['sisa_stok' => $stokObat->sisa_stok - $obat['qty']]);
+          }
+
+        // dd($request->all());
+        // return $request->all();
+        return response()->json([
+            'status' => true,
         ]);
-
-        $stokObat = Obat::find($obat['id']);
-        $stokObat->update(['sisa_stok' => $stokObat->sisa_stok - $obat['qty']]);
-      }
-
-      // dd($request->all());
-      // return $request->all();
-      return response()->json([
-        'status' => true,
-      ]);
     }
+
     public function tambahPelanggan(Request $request)
     {
         $pelanggan = new Pelanggan();
@@ -86,5 +112,4 @@ class DashboardController extends Controller
 
         return $pelanggan;
     }
-
 }

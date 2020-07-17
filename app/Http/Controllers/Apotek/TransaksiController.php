@@ -26,7 +26,7 @@ class TransaksiController extends Controller
 
     public function index()
     {
-        $search_bulan = Carbon::now()->month-1;
+        $search_bulan = Carbon::now()->month - 1;
         $search_tahun = Carbon::now()->year;
         $transaksis = Transaksi::all();
         return view('pages.apotek.transaksi.index', compact(['transaksis', 'search_bulan', 'search_tahun']));
@@ -37,15 +37,25 @@ class TransaksiController extends Controller
         $bulan_satu = $request->print_bulan + 1;
 
         $transaksis = Transaksi::with('obats')->whereMonth('created_at', '>=', $bulan_satu)
-        ->whereMonth('created_at', '<=', $bulan_satu + 2)
-        ->whereYear('created_at', $request->print_tahun)->get();
+            ->whereMonth('created_at', '<=', $bulan_satu + 2)
+            ->whereYear('created_at', $request->print_tahun)->get();
 
+        // $sum = Transaksi::with('totalObats')->whereMonth('created_at', '>=', $bulan_satu)
+        // ->whereMonth('created_at', '<=', $bulan_satu + 2)
+        // ->whereYear('created_at', $request->print_tahun)->get();
+
+        // dd($sum);
+        $total = 0;
+        foreach ($transaksis as $t) {
+            $total += $t->obats->sum('total');
+        }
         $search_bulan = $request->search_bulan_1;
         $search_tahun = $request->search_tahun;
 
-        $pdf = PDF::loadview('pages.apotek.transaksi.transaksi_pdf', compact('transaksis'));
-        return $pdf->stream();
+        // return view('pages.apotek.transaksi.transaksi_pdf', compact('transaksis', 'total'));
 
+        $pdf = PDF::loadview('pages.apotek.transaksi.transaksi_pdf', compact('transaksis','total'));
+        return $pdf->stream();
     }
 
     /**
@@ -191,13 +201,11 @@ class TransaksiController extends Controller
     {
         $bulan_satu = $request->search_bulan_1 + 1;
         $transaksis = Transaksi::whereMonth('created_at', $bulan_satu)
-        ->whereYear('created_at', $request->search_tahun)->get();
+            ->whereYear('created_at', $request->search_tahun)->get();
 
         $search_bulan = $request->search_bulan_1;
         $search_tahun = $request->search_tahun;
 
         return view('pages.apotek.transaksi.search', compact(['search_bulan', 'transaksis', 'search_tahun']));
     }
-
-    
 }

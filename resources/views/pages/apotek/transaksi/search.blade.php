@@ -54,6 +54,7 @@
 
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered dom-jQuery-events">
+                                    @if(count($transaksis) > 0)
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -66,7 +67,10 @@
                                             <th>Total Harga</th>
                                         </tr>
                                     </thead>
+
+
                                     <tbody>
+
                                         @foreach($transaksis as $transaksi)
                                         <tr>
                                             <td width="1%">{{$loop->iteration}}</td>
@@ -96,7 +100,16 @@
                                         </tr>
                                         @endforeach
                                         @endforeach
+
                                     </tbody>
+                                    @else
+                                    <div class="d-flex justify-content-center mt-5">
+                                        <h1>Tidak Ada transaksi pada bulan ini</h1>
+                                    </div>
+
+
+                                    @endif
+
                                 </table>
                             </div>
                         </div>

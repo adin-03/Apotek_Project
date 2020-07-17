@@ -28,10 +28,12 @@ class KaryawanController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'nama' => 'required|unique:kasirs',
-            'alamat' => 'required'
-        ],[
+            'alamat' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+        ], [
             'required' => ':attribute Tidak Boleh Kosong',
             'unique' => ':attribute Sudah ada'
         ]);
@@ -59,19 +61,23 @@ class KaryawanController extends Controller
 
     public function update(Request $request, $id)
     {
-        $this->validate($request,[
+
+        $kasirs = Kasir::find($id);
+
+        $this->validate($request, [
             'nama' => 'required',
-            'email' => 'required|unique:kasirs'
-        ],[
+            'email' => 'required|unique:kasirs,email,'. $kasirs->id . ',id',
+        ], [
             'required' => ':attribute Tidak Boleh Kosong',
             'unique' => ':attribute Sudah ada'
         ]);
 
 
-        $kasirs = Kasir::find($id);
         $kasirs->nama = $request->nama;
         $kasirs->email = $request->email;
-        $kasirs->password = $request->password;
+        if ($request->password != null) {
+            $kasirs->password = Hash::make($request->password);
+        }
         $kasirs->save();
         return redirect()->route('apotek.karyawan.index')->with('success', "Berhasil Mengupdate Data kasir $kasirs->nama!");
     }

@@ -22,4 +22,9 @@ class Transaksi extends Model
     {
         return $this->belongsTo(Pelanggan::class, 'id_pelanggan', 'id');
     }
+
+    // public function totalObats()
+    // {
+    //     return $this->hasMany(TransaksiObat::class, 'id_transaksi', 'id');
+    // }
 }

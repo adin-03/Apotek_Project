@@ -23,11 +23,19 @@
                 <div class="alert alert-success">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span
                             aria-hidden="true">×</span> </button>
-                    <h3 class="text-success"><i class="fa fa-check-circle"></i> Success</h3> {{ $message }}
+                    <h3 class="text-success"><i class="fa fa-check-circle"></i> </h3> {{ $message }}
+                </div>
+                @endif
+
+                @if ($message = Session::get('error'))
+                <div class="alert alert-warning">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span
+                            aria-hidden="true">×</span> </button>
+                    <h3 class="text-danger"><i class="fa fa-check-circle"></i> warning</h3> {{ $message }}
                 </div>
                 @endif
                 <div class="row">
-                    <div class="col-12 col-md-4 col-xs-12 mb-2 border-right">
+                    <div class="col-12 col-md-4 col-xs-12 mb-2">
                         <select class="select2 form-control" id="data-obat">
                             <option value="0" selected="selected">--PIlih Produk--</option>
                             @foreach($obats as $obat)
@@ -36,7 +44,7 @@
                         </select>
                     </div>
 
-                    <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="col-md-8 row pull-right" method="POST">
+                    {{-- <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="col-md-8 row pull-right" method="POST">
                         @csrf
                         <div class="form-group col-md-6">
                             <input type="text" class="form-control form-control-sm" name="tambah_nama_pelanggan"
@@ -51,7 +59,7 @@
                         <div class="form-group col-md-2">
                             <button class="btn btn-info btn-sm" type="submit">tambah pelanggan</button>
                         </div>
-                    </form>
+                    </form> --}}
                     <!-- <div class="col-12 col-md-6 col-xs-12 mb-1">
                     </div> -->
                     <div class="col-12">
@@ -61,8 +69,8 @@
                                     <tr>
                                         <th width="5%">No</th>
                                         <!-- <th width="5%">Kode</th> -->
-                                        <th width="20%">Nama Produk</th>
-                                        <th width="20%">Label</th>
+                                        <th width="15%">Nama Produk</th>
+                                        <th width="10%">Label</th>
                                         <th width="10%">Satuan</th>
                                         <th width="10%">Harga</th>
                                         <th width="40%">Qty</th>
@@ -86,6 +94,7 @@
 
                     <div class="col-md-3 mb-1">
                         <select id="nama-pembeli" name="nama" class="form-control select-pembeli">
+                            <option value="0" selected="selected">--PIlih Nama Pelanggan--</option>
                             @foreach ($pelanggans as $pelanggan)
                                 <option value="{{ $pelanggan->id }}">{{ $pelanggan->nama_pelanggan }} / {{ $pelanggan->no_pelanggan }}</option>
                             @endforeach
@@ -108,8 +117,23 @@
                             <span class="float-right mr-1" id="total-harga">0</span>
                           </strong>
                         </h3>
-                      </div>
-                    <div class="col-md-7"></div>
+                    </div>
+                    <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="col row pull-left" method="POST">
+                        @csrf
+                        <div class="form-group col-md-5">
+                            <input type="text" class="form-control form-control-sm" name="tambah_nama_pelanggan"
+                                placeholder="Nama pembeli">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <input type="date" class="form-control form-control-sm" name="tambah_ttl_pelanggan"
+                                placeholder="Tanggal Lahir pembeli">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <button class="btn btn-info btn-sm" type="submit">tambah pelanggan</button>
+                        </div>
+                    </form>
                     <div class="col-md-5 border-left">
                         <h3>
                             <strong>
@@ -118,6 +142,7 @@
                             </strong>
                         </h3>
                     </div>
+
                     <div class="col-md-7"></div>
                     <div class="col-md-5 border-left">
                         <h3>
@@ -127,11 +152,11 @@
                             </strong>
                         </h3>
                     </div>
+
                     <div class="col-md-12">
                         <button type="button" data-toggle="modal" id="selesai" data-target="" class="float-right btn btn-primary btn-min-width mt-1 btn-lg">Selesai</button>
                       </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>
@@ -317,7 +342,6 @@
         <h3 class="mt-2"> Sedang Menyimpan Data </h3>
       </div>`;
             modalFooter.innerHTML = '';
-
             const storeData = await fetch(url + 'api/kasir/dashboard', {
                 method: 'POST',
                 headers: {
@@ -325,7 +349,9 @@
                 },
                 accept: 'application/json',
                 body: JSON.stringify(data)
-            }).then(res => res.json()).then(res => res);
+            }).then(res => res );
+            console.log(storeData);
+
             if (storeData.status) {
                 modalBody.innerHTML = `
           <div class="text-center mt-2">

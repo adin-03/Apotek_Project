@@ -35,6 +35,7 @@
                                                     </span>
                                         @endif
                                     </div>
+
                                     <div class="row">
                                     <div class="col-4">
                                     <div class="form-group">
@@ -48,14 +49,22 @@
                                         @endif
                                     </div>
                                     </div>
+
+
+
                                     <div class="col-4">
                                     <div class="form-group">
                                         <label>Harga</label>
+                                        <div class="input-group">
                                         {{--<div class="input-group">--}}
                                             {{--<div class="input-group-prepend">--}}
                                                 {{--<span class="input-group-text">Rp.</span>--}}
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Rp.</span>
+                                                </div>
                                         <input type="number" minlength="3" value="{{$obats -> harga}}" class="form-control {{$errors->has('harga')?'is-invalid':''}}"
                                                name="harga">
+                                               </div>
                                         @if ($errors->has('satuan'))
                                             <span class="invalid-feedback" role="alert">
                                                         <p><b>{{ $errors->first('harga') }}</b></p>

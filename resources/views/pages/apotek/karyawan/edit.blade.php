@@ -49,6 +49,17 @@
                                                         <p><b>{{ $errors->first('email') }}</b></p>
                                                     </span>
                                         @endif
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Pasword</label>
+                                        <input type="password" class="form-control {{$errors->has('password')?'is-invalid':''}}"
+                                                name="password">
+                                        @if ($errors->has('password'))
+                                                <span class="invalid-feedback" role="alert">
+                                                        <p><b>{{ $errors->first('password') }}</b></p>
+                                                    </span>
+                                        @endif
 
                                     <div class="form-actions">
                                         <a href="{{route('apotek.karyawan.index')}}" class="btn btn-warning">Cancel</a>

@@ -1,4 +1,4 @@
-@extends('templates.kasir')
+@extends('templates.apotek')
 @section('content')
     <div class="content-wrapper-before"></div>
     <div class="content-header row">
