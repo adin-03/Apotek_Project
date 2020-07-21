@@ -44,11 +44,12 @@
                                                 <th>{{$pelanggan->tanggal_lahir}}</th>
                                                 <th>{{$pelanggan->umur}}</th>
                                                 <td>
-                                                    <a class="btn btn-danger btn-sm" href="#"
+                                                    <a class="btn btn-danger btn-sm" href="{{ route('apotek.pelanggan.destroy', $pelanggan->id) }}"
                                                        onclick="return confirm('Apakah Anda Akan Menghapus data ini?')"
                                                        type="button"> <i class="ft-trash-2"></i>
                                                      </a>
                                                      <a href="{{ route('apotek.pelanggan.histori', $pelanggan->id) }}" class="btn btn-info btn-sm">Histori</a>
+
                                                 </td>
                                             </tr>
                                         @endforeach

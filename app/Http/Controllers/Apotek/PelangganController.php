@@ -34,6 +34,8 @@ class PelangganController extends Controller
 
     public function destroy($id)
     {
-        //
+        $pelanggans = Pelanggan::find($id);
+        $pelanggans->delete();
+        return redirect()->route('apotek.pelanggan.index')->with('success', "Berhasil Menghapus Data merk $pelanggans->nama_pelanggan!");
     }
 }

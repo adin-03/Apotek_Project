@@ -19,7 +19,7 @@
                                 <div class="col-md-7">
                                     <form action="{{route('apotek.transaksi.search')}}" method="get" class="mb-2">
                                         @csrf
-                                        <p>Filter Transaksi Pertiga bulan, dimulai dari bulan :</p>
+                                        {{-- <p>Filter Transaksi Pertiga bulan, dimulai dari bulan :</p> --}}
                                         <div class="row">
                                             @php($bulan = ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
                                             'Agustus', 'September', 'Oktober', 'November', 'Desember'])

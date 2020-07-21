@@ -79,6 +79,9 @@ Route::group(['prefix' => 'apotek'], function () {
 
     Route::get('pelanggan', 'Apotek\PelangganController@index')->name('apotek.pelanggan.index');
     Route::get('pelanggan/{id}', 'Apotek\PelangganController@histori')->name('apotek.pelanggan.histori');
+    Route::get('pelanggan/destroy/{id}', 'Apotek\PelangganController@destroy')->name('apotek.pelanggan.destroy');
+
+
 
     Route::get('penjualan', 'Apotek\PenjualanController@index')->name('apotek.penjualan.index');
     Route::get('penjualan/search', 'Apotek\PenjualanController@search')->name('apotek.penjualan.search');
