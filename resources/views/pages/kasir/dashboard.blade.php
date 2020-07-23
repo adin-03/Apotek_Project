@@ -43,6 +43,24 @@
                             @endforeach
                         </select>
                     </div>
+                    <div class="col-md-12">
+                        <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="row pull-left" method="POST">
+                            @csrf
+                            <div class="form-group col-md-5">
+                                <input type="text" class="form-control form-control-sm" name="tambah_nama_pelanggan"
+                                    placeholder="Nama pembeli">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <input type="date" class="form-control form-control-sm" name="tambah_ttl_pelanggan"
+                                    placeholder="Tanggal Lahir pembeli">
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <button class="btn btn-info btn-sm" type="submit">tambah pelanggan</button>
+                            </div>
+                        </form>
+                    </div>
 
                     {{-- <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="col-md-8 row pull-right" method="POST">
                         @csrf
@@ -118,7 +136,7 @@
                           </strong>
                         </h3>
                     </div>
-                    <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="col row pull-left" method="POST">
+                    {{-- <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="col row pull-left" method="POST">
                         @csrf
                         <div class="form-group col-md-5">
                             <input type="text" class="form-control form-control-sm" name="tambah_nama_pelanggan"
@@ -133,7 +151,8 @@
                         <div class="form-group col-md-3">
                             <button class="btn btn-info btn-sm" type="submit">tambah pelanggan</button>
                         </div>
-                    </form>
+                    </form> --}}
+                    <div class="col pull-left"></div>
                     <div class="col-md-5 border-left">
                         <h3>
                             <strong>
