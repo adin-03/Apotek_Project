@@ -53,7 +53,7 @@
               <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
             </svg>
             <h2 class="card-text mt-2 text-white"> <strong>{{$obat}}</strong></h2>
-            <h3 class="card-text">Total Obat</h3>
+            <h3 class="card-text">Total Produk</h3>
           </div>
         </div>
       </div>
@@ -122,8 +122,8 @@
                             <div class="card-content">
                                 <div class="card-body">
                                     <div class="card-text">
-                                        <p>Image gallery grid with photo-swipe integration. Display images in 4-2-1 columns and photo-swipe provides gallery features.</p>
-                                        <p>Please read the photo-swipe gallery <a href="http://photoswipe.com/documentation/getting-started.html" target="_blank">documentation</a> for usage information.</p>
+                                        <p>Apotek Cemara mempunyai visi menjadi apotek terpercaya dengan pelayanan informasi obat terbaik.</p>
+                                        <p> <a href="http://photoswipe.com/documentation/getting-started.html" target="_blank"></a> </p>
                                     </div>
                                 </div>
                             </div>

@@ -55,7 +55,7 @@
                             										<div class="input-group-prepend">
                             											<span class="input-group-text">Rp.</span>
                             										</div>
-                            										<input type="telp" minlength="3" class="form-control" placeholder="Masukan Harga" name="harga" required>
+                            										<input type="tel" minlength="3" class="form-control" placeholder="Masukan Harga" name="harga" required>
                             									</div>
                                               @if ($errors->has('harga'))
                                                   <span class="invalid-feedback" role="alert">

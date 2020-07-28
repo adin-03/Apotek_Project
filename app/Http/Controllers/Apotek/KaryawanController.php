@@ -29,13 +29,16 @@ class KaryawanController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'nama' => 'required|unique:kasirs',
-            'alamat' => 'required',
-            'email' => 'required',
-            'password' => 'required'
+            'nama' => 'required|unique:kasirs|regex:/^[\pL\s\-]+$/u||min:5',
+            'alamat' => 'required|min:10',
+            'email' => 'required|email',
+            'password' => 'required|min:8'
         ], [
             'required' => ':attribute Tidak Boleh Kosong',
-            'unique' => ':attribute Sudah ada'
+            'unique' => ':attribute Sudah ada',
+            'min'       => ':attribute minimal :min karakter',
+            'email'     => ':attribute harus sesuai format email',
+            'nama.regex'     => ':attribute harus huruf semua'
         ]);
 
         $karyawan = new Kasir();
@@ -65,11 +68,15 @@ class KaryawanController extends Controller
         $kasirs = Kasir::find($id);
 
         $this->validate($request, [
-            'nama' => 'required',
-            'email' => 'required|unique:kasirs,email,'. $kasirs->id . ',id',
+            'nama' => 'required|regex:/^[\pL\s\-]+$/u||min:5',
+            'alamat' => 'required|min:10',
+            'email' => 'required|unique:kasirs,email,'. $kasirs->id . ',id'
+
         ], [
             'required' => ':attribute Tidak Boleh Kosong',
-            'unique' => ':attribute Sudah ada'
+            'unique' => ':attribute Sudah ada',
+            'email'     => ':attribute harus sesuai format email',
+            'name.regex'     => ':attribute harus huruf semua'
         ]);
 
 

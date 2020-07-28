@@ -35,14 +35,6 @@
                 </div>
                 @endif
                 <div class="row">
-                    <div class="col-12 col-md-4 col-xs-12 mb-2">
-                        <select class="select2 form-control" id="data-obat">
-                            <option value="0" selected="selected">--PIlih Produk--</option>
-                            @foreach($obats as $obat)
-                            <option value="{{$obat->id}}">{{$obat->nama_produk}} / {{$obat->satuan}}</option>
-                            @endforeach
-                        </select>
-                    </div>
                     <div class="col-md-12">
                         <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="row pull-left" method="POST">
                             @csrf
@@ -60,6 +52,14 @@
                                 <button class="btn btn-info btn-sm" type="submit">tambah pelanggan</button>
                             </div>
                         </form>
+                    </div>
+                    <div class="col-12 col-md-4 col-xs-12 mb-2">
+                        <select class="select2 form-control" id="data-obat">
+                            <option value="0" selected="selected">--PIlih Produk--</option>
+                            @foreach($obats as $obat)
+                            <option value="{{$obat->id}}">{{$obat->nama_produk}} / {{$obat->satuan}}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     {{-- <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="col-md-8 row pull-right" method="POST">

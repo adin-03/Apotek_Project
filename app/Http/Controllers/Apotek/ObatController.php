@@ -54,6 +54,7 @@ class ObatController extends Controller
 
         ],[
             'required' => ':attribute Tidak Boleh Kosong',
+            'numeric'   => ':attribute hanya boleh angka',
             'unique' => ':attribute Sudah ada'
         ]);
 
