@@ -125,7 +125,7 @@
                     </div>
 
                     <div class="col-md-2 mb-1">
-                        <input type="tel" class="form-control form-control-sm" onchange="rupiah(this.value)" id="tunai"
+                        <input type="number" class="form-control form-control-sm" onchange="rupiah(this.value)" id="tunai"
                             name="total_bayar" placeholder="Total Bayar">
                     </div>
                     <div class="col-md-5 border-left">

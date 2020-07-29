@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="698e9dbf-7f27-4e1e-8941-c2bbffcd9fab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Apotek/MerkController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Apotek/MerkController.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_10_092045_create_kasirs_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_05_10_092045_create_kasirs_table.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kasir/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/kasir/dashboard.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/kasir/merk/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/kasir/merk/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/templates/partials/apotek/_head.blade.php" afterPath="$PROJECT_DIR$/resources/views/templates/partials/apotek/_head.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +31,8 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="213" column="14" lean-forward="true" selection-start-line="213" selection-start-column="14" selection-end-line="213" selection-end-column="14" />
+            <state relative-caret-position="507">
+              <caret line="472" column="21" lean-forward="true" selection-start-line="472" selection-start-column="21" selection-end-line="472" selection-end-column="21" />
               <folding>
                 <marker date="1595964054537" expanded="true" signature="9:26" ph="..." />
                 <marker date="1595964054537" expanded="true" signature="37:46" ph="..." />
@@ -670,12 +665,12 @@
       <workItem from="1594624351447" duration="89000" />
       <workItem from="1594717758291" duration="1294000" />
       <workItem from="1595842424460" duration="592000" />
-      <workItem from="1595951288799" duration="3723000" />
+      <workItem from="1595951288799" duration="5330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264059000" />
+    <option name="totallyTimeSpent" value="265666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1165,8 +1160,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/kasir/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="213" column="14" lean-forward="true" selection-start-line="213" selection-start-column="14" selection-end-line="213" selection-end-column="14" />
+        <state relative-caret-position="507">
+          <caret line="472" column="21" lean-forward="true" selection-start-line="472" selection-start-column="21" selection-end-line="472" selection-end-column="21" />
           <folding>
             <marker date="1595964054537" expanded="true" signature="9:26" ph="..." />
             <marker date="1595964054537" expanded="true" signature="37:46" ph="..." />
