@@ -210,7 +210,7 @@
         </div>
         <div class="modal-footer">
         <button type="button" class="btn grey btn-danger" data-dismiss="modal">Batal</button>
-        <button type="button" id="simpan" class="btn btn-success">Simpan & Cetak</button>
+        <button type="button" id="simpan" class="btn btn-success">Simpan</button>
         </div>
     </div>
     </div>

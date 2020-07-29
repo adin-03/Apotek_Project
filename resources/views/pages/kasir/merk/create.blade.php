@@ -33,7 +33,7 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="">Merk</label>
-                                        <input type="text" class="form-control {{$errors->has('merk')?'is-invalid':''}}"
+                                        <input type="text" maxlength="30" class="form-control {{$errors->has('merk')?'is-invalid':''}}"
                                                placeholder="Masukkan Nama Merk" name="merk">
                                         @if ($errors->has('merk'))
                                             <span class="invalid-feedback" role="alert">

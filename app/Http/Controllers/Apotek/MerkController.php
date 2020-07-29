@@ -43,11 +43,12 @@ class MerkController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-           'merk' => 'required|unique:merks|max:30'
+           'merk' => 'required|unique:merks|max:30|min:5'
         ],[
             'merk.required' => 'Label Tidak Boleh Kosong',
             'merk.unique' => 'Label Sudah ada',
-            'merk.min' => 'Label minimal :max karakter'
+            'merk.min' => 'Label manimal 5 karakter',
+            'merk.max' => 'Label maksimal 30 karakter'
         ]);
 
         $data = new Merk();
