@@ -21,11 +21,10 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <form action="{{route('apotek.penjualan.search')}}" method="get">
-                                            @csrf
                                             <p>Filter Transaksi Pertiga bulan, dimulai dari bulan :</p>
                                             <div class="row">
                                                 @php($bulan = ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'])
-                                                <select class="form-control col-md-3 mr-2 ml-3" name="search_bulan_1">
+                                                <select class="form-control col-md-3 mr-2 ml-3" name="search_bulan">
                                                     @for($i = 0; $i < count($bulan); $i++)
                                                         <option value="{{$i}}" {{ $search_bulan == $i+1 ? 'selected' : '' }}>{{$bulan[$i]}}</option>
                                                     @endfor
@@ -38,8 +37,14 @@
                                                     @endfor
                                                 </select>
                                                 <button class="btn btn-primary" type="submit">search</button>
-
                                             </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-2 mt-2">
+                                        <form action="{{ route('apotek.penjualan.cetak_pdf') }}" method="get">
+                                            <input name="bulan" value="{{ $search_bulan }}" type="hidden">
+                                            <input name="tahun" value="{{ $search_tahun }}" type="hidden">
+                                            <button class="btn btn-primary" type="submit" target="_blank"> <i class="ft-printer"></i> Cetak</button>
                                         </form>
                                     </div>
                                     {{-- <div class="col-md-3">

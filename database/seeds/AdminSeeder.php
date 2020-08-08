@@ -30,6 +30,7 @@ class AdminSeeder extends Seeder
             'nama' => 'Dahlia W',
             'email' => 'dahliaw@mail.com',
             'password' => bcrypt(12345678),
+            'no_hp' => '085642781288',
             'alamat' => 'Jl Srikandi Desa Kedokan sayang kab Tegal',
             'id_apotek' => $apotek->id
         ]);

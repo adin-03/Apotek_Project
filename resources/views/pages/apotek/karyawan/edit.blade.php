@@ -41,6 +41,16 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
+                                        <label>Nomor Hp</label>
+                                        <input type="text" value="{{$kasirs -> no_hp}}" class="form-control {{$errors->has('no_hp')?'is-invalid':''}}"
+                                               name="no_hp">
+                                        @if ($errors->has('no_hp'))
+                                            <span class="invalid-feedback" role="alert">
+                                                        <p><b>{{ $errors->first('no_hp') }}</b></p>
+                                                    </span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group">
                                         <label>Email</label>
                                         <input type="text" value="{{$kasirs -> email}}" class="form-control {{$errors->has('email')?'is-invalid':''}}"
                                                name="email">
@@ -50,7 +60,7 @@
                                                     </span>
                                         @endif
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label>Pasword</label>
                                         <input type="password" class="form-control {{$errors->has('password')?'is-invalid':''}}"

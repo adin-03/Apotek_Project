@@ -31,6 +31,7 @@ class KaryawanController extends Controller
         $this->validate($request, [
             'nama' => 'required|unique:kasirs|regex:/^[\pL\s\-]+$/u||min:5',
             'alamat' => 'required|min:10',
+            'no_hp' => 'required|min:8',
             'email' => 'required|email',
             'password' => 'required|min:8'
         ], [
@@ -45,6 +46,7 @@ class KaryawanController extends Controller
         $karyawan->id_apotek = Auth::guard('apotek')->user()->id;
         $karyawan->nama = $request->nama;
         $karyawan->alamat = $request->alamat;
+        $karyawan->no_hp =$request->no_hp;
         $karyawan->email = $request->email;
         $karyawan->password = Hash::make($request->password);
         $karyawan->save();
@@ -70,6 +72,7 @@ class KaryawanController extends Controller
         $this->validate($request, [
             'nama' => 'required|regex:/^[\pL\s\-]+$/u||min:5',
             'alamat' => 'required|min:10',
+            'no_hp' => 'required|min:8',
             'email' => 'required|unique:kasirs,email,'. $kasirs->id . ',id'
 
         ], [

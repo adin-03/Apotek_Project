@@ -85,6 +85,9 @@ Route::group(['prefix' => 'apotek'], function () {
 
     Route::get('penjualan', 'Apotek\PenjualanController@index')->name('apotek.penjualan.index');
     Route::get('penjualan/search', 'Apotek\PenjualanController@search')->name('apotek.penjualan.search');
+    Route::get('penjualan/cetak_pdf', 'Apotek\PenjualanController@cetak_pdf')->name('apotek.penjualan.cetak_pdf');
+
+
 });
 
 Route::group(['prefix' => 'kasir'], function () {

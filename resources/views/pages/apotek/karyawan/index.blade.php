@@ -3,7 +3,7 @@
     <div class="content-wrapper-before"></div>
     <div class="content-header row">
         <div class="content-header-left col-md-4 col-12 mb-2">
-            <h3 class="content-header-title">Data Karyawan</h3>
+            <h3 class="content-header-title">Data Karyawan Apotek</h3>
         </div>
         <div class="content-header-right col-md-8 col-12">
             <div class="breadcrumbs-top float-md-right">
@@ -36,6 +36,7 @@
                                             <th>Id</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
+                                            <th>Nomor Hp</th>
                                             <th>Email</th>
                                             <th>action</th>
                                         </tr>
@@ -46,6 +47,7 @@
                                                 <th>{{$karyawan->id}}</th>
                                                 <th>{{$karyawan->nama}}</th>
                                                 <th>{{$karyawan->alamat}}</th>
+                                                <th>{{$karyawan->no_hp}}</th>
                                                 <th>{{$karyawan->email}}</th>
                                                 <td>
                                                     <a class="btn btn-danger"
