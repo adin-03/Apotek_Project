@@ -44,6 +44,8 @@
    return redirect()->route('kasir.dashboard');
 });*/
 
+
+
 Route::group(['prefix' => 'apotek'], function () {
     Route::get('login', 'Apotek\AuthApotekController@showLoginForm')->name('show.apotek.login');
     Route::post('login/submit', 'Apotek\AuthApotekController@login')->name('apotek.login');
@@ -80,6 +82,7 @@ Route::group(['prefix' => 'apotek'], function () {
     Route::get('pelanggan', 'Apotek\PelangganController@index')->name('apotek.pelanggan.index');
     Route::get('pelanggan/{id}', 'Apotek\PelangganController@histori')->name('apotek.pelanggan.histori');
     Route::get('pelanggan/destroy/{id}', 'Apotek\PelangganController@destroy')->name('apotek.pelanggan.destroy');
+    Route::post('pelanggan/filter', 'Apotek\PelangganController@filter')->name('apotek.pelanggan.filter');
 
 
 
@@ -95,6 +98,11 @@ Route::group(['prefix' => 'kasir'], function () {
     Route::get('login', 'Kasir\AuthKasirController@showLoginForm')->name('show.kasir.login');
     Route::post('login/submit', 'Kasir\AuthKasirController@login')->name('kasir.login');
     Route::get('/logout', 'Kasir\AuthKasirController@logout')->name('kasir.logout');
+    
+    Route::get('/password/reset', 'Kasir\ForgotPasswordController@showLinkRequestForm')->name('kasir.password.request');
+    Route::post('/password/email', 'Kasir\ForgotPasswordController@sendResetLinkEmail')->name('kasir.password.email');
+    Route::get('/password/reset/{token}', 'Kasir\ResetPasswordController@showResetForm')->name('kasir.password.reset');
+    Route::post('/password/reset', 'Kasir\ResetPasswordController@reset')->name('kasir.password.update');
 
     Route::get('dashboard', 'Kasir\DashboardController@dashboard')->name('kasir.dashboard');
     Route::post('dashboard', 'Kasir\DashboardController@store');

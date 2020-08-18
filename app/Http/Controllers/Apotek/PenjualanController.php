@@ -53,8 +53,6 @@ class PenjualanController extends Controller
 
     public function cetak_pdf(Request $request)
     {
-        // dd($request->all());
-
         $bulan_satu = $request->bulan;
 
         $transaksis = TransaksiObat::whereHas('transaksi', function ($query) use ($bulan_satu, $request) {
@@ -63,23 +61,24 @@ class PenjualanController extends Controller
                 ->whereYear('created_at', $request->tahun);
         })->get();
 
+
+        $total = $transaksis->sum('total');
+
         $results = $transaksis->groupBy('id_obat')->map(function ($row) {
             return $row->sum('kuantitas');
         });
 
 
-        $total = $transaksis->groupBy('id_obat')->map(function ($row) {
+        $totalPerProduk = $transaksis->groupBy('id_obat')->map(function ($row) {
             return $row->sum('total');
         });
-
-        // dd($total);
-
         $obats = Obat::all();
 
-        return view('pages.apotek.penjualan.penjualan_pdf', compact('transaksis', 'total', 'obats'));
+        
+        //return view('pages.apotek.penjualan.penjualan_pdf', compact('transaksis', 'total', 'obats', 'results', 'totalPerProduk'));
 
-        // $pdf = PDF::loadview('pages.apotek.penjualan.transaksi_pdf', compact('transaksis', 'total'));
-        // return $pdf->stream();
+        $pdf = PDF::loadview('pages.apotek.penjualan.penjualan_pdf',compact('transaksis', 'total', 'obats', 'results', 'totalPerProduk'));
+        return $pdf->stream();
     }
 
     public function search(Request $request)

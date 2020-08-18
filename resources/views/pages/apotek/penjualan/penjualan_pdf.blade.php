@@ -37,25 +37,28 @@
         <th>No</th>
         <th>Nama Produk</th>
         <th>Total Penjualan</th>
-        <th>Total Harga PerProduk</th>
-        <th>Total Harga</th>
+        <th>Total Harga Per Produk</th>
     </tr>
     </thead>
     <tbody>
         @foreach($obats as $key => $obat)
-        @if(isset($results[$key+1]) > 0)
+
+            @if(count($results) > 0)
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{$obat->nama_produk}}</td>
+                <td>{{ isset($results[$key+1]) ?  $results[$key+1] .' '. $obat->satuan : '-' }}</td>
+                <td>{{isset($totalPerProduk[$key+1]) ? 'Rp. '. number_format($totalPerProduk[$key+1]) : '-'}}</td>
+            </tr>
+            @endif
+        @endforeach
         <tr>
-            <td>{{ $no }}</td>
-            <td>{{$obat->nama_produk}}</td>
-            <td>{{ isset($results[$key+1]) ?  $results[$key+1] .' '. $obat->satuan : '' }}</td>
-            <td>{{isset($total_harga_perproduk[$key+1]) ? 'Rp. '. number_format($total_harga_perproduk[$key+1]) : ''}}</td>
+            <td colspan="2"></td>
+            <td><b>Jumlah </b></td>
+            <td><b>{{'Rp. '.number_format($total,0,',','.')}}</b></td>
         </tr>
-        <?php $no++ ?>
-        @endif
-    @endforeach
-
     </tbody>
-
+    
 </table>
 
 </body>

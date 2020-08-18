@@ -136,22 +136,7 @@
                           </strong>
                         </h3>
                     </div>
-                    {{-- <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="col row pull-left" method="POST">
-                        @csrf
-                        <div class="form-group col-md-5">
-                            <input type="text" class="form-control form-control-sm" name="tambah_nama_pelanggan"
-                                placeholder="Nama pembeli">
-                        </div>
 
-                        <div class="form-group col-md-4">
-                            <input type="date" class="form-control form-control-sm" name="tambah_ttl_pelanggan"
-                                placeholder="Tanggal Lahir pembeli">
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            <button class="btn btn-info btn-sm" type="submit">tambah pelanggan</button>
-                        </div>
-                    </form> --}}
                     <div class="col pull-left"></div>
                     <div class="col-md-5 border-left">
                         <h3>
@@ -182,37 +167,41 @@
 
 <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-        <div class="modal-header bg-success white">
-        <h4 class="modal-title white" id="basicModalLabel1">Detail Pembayaran</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-  <h5 id="detail-nama"></h5>
-  <h5 id="detail-umur"></h5>
-  <table class="table table-borderless">
-    <thead>
-     <tr>
-       <th scope="col">No</th>
-       <th scope="col">Nama</th>
-       <th scope="col">Qty</th>
-       <th scope="col">Harga</th>
-       <th scope="col">Total</th>
-     </tr>
-    </thead>
-    <tbody id="detail-pembayaran">
+        <div class="modal-content">
+            <div class="modal-header bg-success white">
+            <h4 class="modal-title white" id="basicModalLabel1">Detail Pembayaran</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-8">
+                    <h5 id="detail-nama"></h5>
+                    <h5 id="detail-umur"></h5>
+                </div>
+                <div class="col-4">
+                    <h5>Tanggal : {{\Carbon\Carbon::now()->format('d F Y')}}</h5>
+                    <h5 id="detail-waktu"></h5>
+                </div>
 
-
-    </tbody>
-    </table>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="detail-pembayaran"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn grey btn-danger" data-dismiss="modal">Batal</button>
+                <button type="button" id="simpan" class="btn btn-success">Simpan</button>
+            </div>
         </div>
-        <div class="modal-footer">
-        <button type="button" class="btn grey btn-danger" data-dismiss="modal">Batal</button>
-        <button type="button" id="simpan" class="btn btn-success">Simpan</button>
-        </div>
-    </div>
     </div>
 </div>
 </div>
@@ -346,9 +335,12 @@
 
     simpan.addEventListener('click', async function () {
         const data = {
+            
             nama_pembeli: namaPembeli.value,
             umur: umur.value,
+            total_harga: totalHarga.value,
             total_bayar: tunai.value,
+            kembali: tunai.value - totalHarga.value,
             id_kasir: '{{Auth::user()->id}}',
             obats: daftarObat
         }
@@ -418,7 +410,7 @@
         </tr>`
             detailPemabayaran.innerHTML = trModal
         }
-    })
+    });
 
     function hapus(i) {
         let deleteRow = ``;
@@ -484,6 +476,8 @@
 
 </script>
 <script>
+    const detailTanggal = document.querySelector('#detail-tanggal');
+    const detailWaktu = document.querySelector('#detail-waktu');
     function startTime() {
         var today = new Date();
         var h = today.getHours();
@@ -491,8 +485,8 @@
         var s = today.getSeconds();
         m = checkTime(m);
         s = checkTime(s);
-        document.getElementById('txt').innerHTML =
-            h + ":" + m + ":" + s;
+        detailWaktu.innerHTML ="Jam : " + h + ":" + m + ":" + s;
+        document.getElementById('txt').innerHTML =h + ":" + m + ":" + s;
         var t = setTimeout(startTime, 500);
     }
 

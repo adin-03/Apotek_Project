@@ -10,6 +10,7 @@ use App\Transaksi;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use DB;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class DashboardController extends Controller
 {
@@ -43,27 +44,6 @@ class DashboardController extends Controller
             $no_transaksi = Carbon::now()->format('dmY') . '-1';
         }
 
-        // $transaksi = new Transaksi();
-        // $transaksi->no_transaksi = $no_transaksi;
-        // $transaksi->id_pelanggan = $request->nama_pembelian;
-        // $transaksi->id_kasir = $request->id_kasir;
-        // $transaksi->total_bayar = $request->total_bayar;
-        // $transaksi->save();
-
-        // foreach ($request->obats as $obat) {
-        //     $transaksiObat = new TransaksiObat();
-        //     $transaksiObat->id_obat = $obat['id'];
-        //     $transaksiObat->id_transaksi = $transaksi->id;
-        //     $transaksiObat->nama_produk = $obat['nama_produk'];
-        //     $transaksiObat->harga = $obat['harga'];
-        //     $transaksiObat->kuantitas = $obat['qty'];
-        //     $transaksiObat->total = $obat['harga'] * $obat['qty'];
-        //     $transaksiObat->save();
-
-        //     $stokObat = Obat::find($obat['id']);
-        //     $stokObat->update(['sisa_stok' => $stokObat->sisa_stok - $obat['qty']]);
-        // }
-
           $transaksi = Transaksi::create([
             'no_transaksi' => $no_transaksi,
             'id_pelanggan' => $request->nama_pembeli,
@@ -87,11 +67,18 @@ class DashboardController extends Controller
             $stokObat->update(['sisa_stok' => $stokObat->sisa_stok - $obat['qty']]);
           }
 
-        // dd($request->all());
-        // return $request->all();
+          $this->print($request->obats, $request->total_harga, $request->total_bayar, $request->kembali);
+
         return response()->json([
             'status' => true,
         ]);
+    }
+
+    private function print($obats, $totalHarga, $totalBayar, $kembali)
+    {
+        //return view('pages.apotek.penjualan.kasir_pdf',compact(['obats', 'totalHarga', 'totalBayar', 'kembali']));
+        $pdf = PDF::loadview('pages.apotek.penjualan.kasir_pdf',compact(['obats', 'totalHarga', 'totalBayar', 'kembali']));
+        return $pdf->stream();
     }
 
     public function tambahPelanggan(Request $request)

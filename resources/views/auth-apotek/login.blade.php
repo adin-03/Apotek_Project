@@ -70,6 +70,14 @@
                                     </div>
                                 @endif
 
+                                @if ($message = Session::get('success'))
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span
+                                                    aria-hidden="true">×</span> </button>
+                                        <h3 class="text-success"><i class="fa fa-check"></i> Warning</h3> {{ $message }}
+                                    </div>
+                                @endif
+
                                 <div class="card-body">
 
                                     <form class="form-horizontal" method="post" action="{{ route('apotek.login') }}">

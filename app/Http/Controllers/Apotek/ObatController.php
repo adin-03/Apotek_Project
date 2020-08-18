@@ -120,8 +120,10 @@ class ObatController extends Controller
         $obats->nama_produk = $request->nama_produk;
         $obats->satuan = $request->satuan;
         $obats->harga = $request->harga;
-        $obats->stok = $request->stok;
+        $obats->stok += $request->stok;
+        $obats->sisa_stok += $request->stok;
         $obats->update();
+        
         return redirect()->route('apotek.obat.index')->with('success', "Berhasil Mengupdate Data Obat $obats->nama_produk!");
     }
 

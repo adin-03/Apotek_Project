@@ -26,7 +26,28 @@
                                 @endif
 
                                 <div class="table-responsive">
+                                    <label for="">filter pelanggan berdasarkan obat yang di beli</label>
+                                    <form action="{{ route('apotek.pelanggan.filter') }}" class="row" method="POST">
+                                        @csrf
+                                        <div class="form-group col-md-4">
+                                            <select name="id_obat" class="form-control input-sm">
+                                                <option value="0">Semua</option>
+                                                @foreach ($obats as $o)
+                                                    <option value="{{ $o->id }}" {{ $o->id == $obat ? "selected" : ""  }}>{{ $o->nama_produk }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <button type="submit" class="btn btn-info btn-sm">filter</button>
+                                        </div>
+                                    </form>
+
                                     <table class="table table-striped table-bordered dom-jQuery-events">
+                                        @if (count($pelanggans) < 1)
+                                        <div class="d-flex justify-content-center mt-5">
+                                            <h1>Tidak Ada Pelanggan</h1>
+                                        </div>
+                                        @else
                                         <thead>
                                         <tr>
                                             <td>No Pelanggan</td>
@@ -54,6 +75,7 @@
                                             </tr>
                                         @endforeach
                                         </tbody>
+                                        @endif
                                     </table>
                                 </div>
                             </div>
