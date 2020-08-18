@@ -67,8 +67,6 @@ class DashboardController extends Controller
             $stokObat->update(['sisa_stok' => $stokObat->sisa_stok - $obat['qty']]);
         }
 
-        // $this->print($request->obats, $request->total_harga, $request->total_bayar, $request->kembali);
-
         return response()->json([
             'status' => true,
             'no_transaksi' => $no_transaksi
@@ -79,9 +77,10 @@ class DashboardController extends Controller
     {
         $transaksi = Transaksi::where('no_transaksi', $no_transaksi)->first();
         if ($transaksi) {
-            $pdf = PDF::loadview('pages.kasir.print-pembayaran',compact('transaksi'));
+            $pdf = PDF::loadview('pages.kasir.print-pembayaran',compact('transaksi'))
+            ->setPaper('A4', 'landscape');
             return $pdf->stream();
-            // return view('pages.kasir.print-pembayaran', compact('transaksi'));
+            //return view('pages.kasir.print-pembayaran', compact('transaksi'));
         } else {
             return back();
         }
