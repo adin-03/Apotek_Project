@@ -174,7 +174,8 @@
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
-            <div class="modal-body row">
+            <div class="modal-body">
+                <div class="row">
                 <div class="col-8">
                     <h5 id="detail-nama"></h5>
                     <h5 id="detail-umur"></h5>
@@ -183,7 +184,7 @@
                     <h5>Tanggal : {{\Carbon\Carbon::now()->format('d F Y')}}</h5>
                     <h5 id="detail-waktu"></h5>
                 </div>
-
+                </div>
                 <table class="table table-borderless">
                     <thead>
                         <tr>
@@ -335,7 +336,7 @@
 
     simpan.addEventListener('click', async function () {
         const data = {
-            
+
             nama_pembeli: namaPembeli.value,
             umur: umur.value,
             total_harga: totalHarga.value,
@@ -360,18 +361,18 @@
                 },
                 accept: 'application/json',
                 body: JSON.stringify(data)
-            }).then(res => res );
+            }).then(res => res.json()).then(res => res);
             console.log(storeData);
 
             if (storeData.status) {
                 modalBody.innerHTML = `
           <div class="text-center mt-2">
-          <svg viewBox="0 0 24 24" width="100" height="100" stroke="#5ed84f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              <h3 class="mt-2"> Success </h3>
-          </svg>
-          <a href="dashboard" type="button" class="btn grey btn-success mt-2">OK</a>
+            <svg viewBox="0 0 24 24" width="100" height="100" stroke="#5ed84f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                <h3 class="mt-2"> Success </h3>
+            </svg>
+            <a href="dashboard" onclick="window.open('dashboard/print/${storeData.no_transaksi}')" type="button" class="btn grey btn-success mt-2">Print</a>
           </div>`
             }
         } catch (e) {

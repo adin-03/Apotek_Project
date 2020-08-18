@@ -44,40 +44,53 @@ class DashboardController extends Controller
             $no_transaksi = Carbon::now()->format('dmY') . '-1';
         }
 
-          $transaksi = Transaksi::create([
+        $transaksi = Transaksi::create([
             'no_transaksi' => $no_transaksi,
             'id_pelanggan' => $request->nama_pembeli,
             //'nama_pembeli' => $request->nama_pembeli,
             //'umur' => $request->umur,
             'id_kasir' => $request->id_kasir,
             'total_bayar' => $request->total_bayar
-          ]);
+        ]);
 
-          foreach ($request->obats as $obat) {
+        foreach ($request->obats as $obat) {
             TransaksiObat::create([
-              'id_obat' => $obat['id'],
-              'id_transaksi' => $transaksi->id,
-              'nama_produk' => $obat['nama_produk'],
-              'harga' => $obat['harga'],
-              'kuantitas' => $obat['qty'],
-              'total' => $obat['harga'] * $obat['qty']
+                'id_obat' => $obat['id'],
+                'id_transaksi' => $transaksi->id,
+                'nama_produk' => $obat['nama_produk'],
+                'harga' => $obat['harga'],
+                'kuantitas' => $obat['qty'],
+                'total' => $obat['harga'] * $obat['qty']
             ]);
 
             $stokObat = Obat::find($obat['id']);
             $stokObat->update(['sisa_stok' => $stokObat->sisa_stok - $obat['qty']]);
-          }
+        }
 
-          $this->print($request->obats, $request->total_harga, $request->total_bayar, $request->kembali);
+        // $this->print($request->obats, $request->total_harga, $request->total_bayar, $request->kembali);
 
         return response()->json([
             'status' => true,
+            'no_transaksi' => $no_transaksi
         ]);
+    }
+
+    public function printPembayaran($no_transaksi)
+    {
+        $transaksi = Transaksi::where('no_transaksi', $no_transaksi)->first();
+        if ($transaksi) {
+            $pdf = PDF::loadview('pages.kasir.print-pembayaran',compact('transaksi'));
+            return $pdf->stream();
+            // return view('pages.kasir.print-pembayaran', compact('transaksi'));
+        } else {
+            return back();
+        }
     }
 
     private function print($obats, $totalHarga, $totalBayar, $kembali)
     {
         //return view('pages.apotek.penjualan.kasir_pdf',compact(['obats', 'totalHarga', 'totalBayar', 'kembali']));
-        $pdf = PDF::loadview('pages.apotek.penjualan.kasir_pdf',compact(['obats', 'totalHarga', 'totalBayar', 'kembali']));
+        $pdf = PDF::loadview('pages.apotek.penjualan.kasir_pdf', compact(['obats', 'totalHarga', 'totalBayar', 'kembali']));
         return $pdf->stream();
     }
 

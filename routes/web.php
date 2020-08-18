@@ -89,8 +89,6 @@ Route::group(['prefix' => 'apotek'], function () {
     Route::get('penjualan', 'Apotek\PenjualanController@index')->name('apotek.penjualan.index');
     Route::get('penjualan/search', 'Apotek\PenjualanController@search')->name('apotek.penjualan.search');
     Route::get('penjualan/cetak_pdf', 'Apotek\PenjualanController@cetak_pdf')->name('apotek.penjualan.cetak_pdf');
-
-
 });
 
 Route::group(['prefix' => 'kasir'], function () {
@@ -98,7 +96,7 @@ Route::group(['prefix' => 'kasir'], function () {
     Route::get('login', 'Kasir\AuthKasirController@showLoginForm')->name('show.kasir.login');
     Route::post('login/submit', 'Kasir\AuthKasirController@login')->name('kasir.login');
     Route::get('/logout', 'Kasir\AuthKasirController@logout')->name('kasir.logout');
-    
+
     Route::get('/password/reset', 'Kasir\ForgotPasswordController@showLinkRequestForm')->name('kasir.password.request');
     Route::post('/password/email', 'Kasir\ForgotPasswordController@sendResetLinkEmail')->name('kasir.password.email');
     Route::get('/password/reset/{token}', 'Kasir\ResetPasswordController@showResetForm')->name('kasir.password.reset');
@@ -108,6 +106,7 @@ Route::group(['prefix' => 'kasir'], function () {
     Route::post('dashboard', 'Kasir\DashboardController@store');
     Route::post('dashboard/pelanggan/tambah', 'Kasir\DashboardController@tambahPelanggan')->name('kasir.dashboard.tambahpelanggan');
     Route::get('dashboard/pelanggan/{id}', 'Kasir\DashboardController@ambilPelanggan');
+    Route::get('dashboard/print/{no_transaksi}', 'Kasir\DashboardController@printPembayaran');
 
     Route::get('merk', 'Kasir\MerkController@index')->name('kasir.merk.index');
     Route::get('transaksi/obat/{id}', 'Kasir\DashboardController@search');
