@@ -18,6 +18,7 @@ class CreateObatsTable extends Migration
             $table->char('kode_obat','5')->unique();
             $table->bigInteger('id_merk')->unsigned();
             $table->string('nama_produk', '50')->unique();
+            $table->string('kategori');
             $table->string('satuan','10');
             $table->integer('harga');
             $table->integer('stok');

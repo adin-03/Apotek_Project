@@ -58,6 +58,7 @@ class DashboardController extends Controller
                 'id_obat' => $obat['id'],
                 'id_transaksi' => $transaksi->id,
                 'nama_produk' => $obat['nama_produk'],
+                'kategori' => $obat['kategori'],
                 'harga' => $obat['harga'],
                 'kuantitas' => $obat['qty'],
                 'total' => $obat['harga'] * $obat['qty']

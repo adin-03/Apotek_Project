@@ -48,6 +48,7 @@ class ObatController extends Controller
     {
         $this->validate($request,[
             'nama_produk' => 'required|unique:obats',
+            'kategori' => 'string|required',
             'satuan' => 'string|required',
             'harga' => 'numeric|required',
             'stok' => 'numeric|required'
@@ -62,6 +63,7 @@ class ObatController extends Controller
         $data->id_merk = $request->id_merk;
         $data->kode_obat = Str::random(5);
         $data->nama_produk = $request->nama_produk;
+        $data->kategori = $request->kategori;
         $data->satuan = $request->satuan;
         $data->harga = $request->harga;
         $data->stok = $request->stok;
@@ -105,6 +107,7 @@ class ObatController extends Controller
     {
         $this->validate($request,[
             'nama_produk' => 'string|required',
+            'kategori' => 'string|required',
             'satuan' => 'string|required',
             'harga' => 'numeric|required',
             'stok' => 'numeric|required'
@@ -118,12 +121,13 @@ class ObatController extends Controller
         $obats = Obat::find($id);
         $obats->id_merk = $request->id_merk;
         $obats->nama_produk = $request->nama_produk;
+        $obats->kategori = $request->kategori;
         $obats->satuan = $request->satuan;
         $obats->harga = $request->harga;
         $obats->stok += $request->stok;
         $obats->sisa_stok += $request->stok;
         $obats->update();
-        
+
         return redirect()->route('apotek.obat.index')->with('success', "Berhasil Mengupdate Data Obat $obats->nama_produk!");
     }
 

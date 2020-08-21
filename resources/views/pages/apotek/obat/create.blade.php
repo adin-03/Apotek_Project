@@ -33,6 +33,19 @@
                                             </span>
                                         @endif
                                     </div>
+
+                                    <div class="row">
+                                        <div class="col-3">
+                                          <div class="form-group">
+                                              <label>Kategori</label>
+                                              <select class="form-control" name="kategori">
+                                                  <option value="Obat Keras">Obat Keras</option>
+                                                  <option value="Obat Bebas Terbatas">Obat Bebas Terbatas</option>
+                                                  <option value="Obat Jamu">Obat Jamu</option>
+                                              </select>
+                                          </div>
+                                        </div>
+
                                     <div class="row">
                                       <div class="col-4">
                                         <div class="form-group">
@@ -48,7 +61,7 @@
                                             </select>
                                         </div>
                                       </div>
-                                      <div class="col-4">
+                                      <div class="col-5">
                                           <div class="form-group">
                                               <label>Harga</label>
                                               <div class="input-group">
@@ -64,7 +77,7 @@
                                               @endif
                                           </div>
                                       </div>
-                                      <div class="col-4">
+                                      <div class="col-3">
                                         <div class="form-group">
                                             <label>Stok</label>
                                             <input type="number" min="1" value="1" class="form-control {{$errors->has('stok')?'is-invalid':''}}"

@@ -40,6 +40,18 @@
                                     @endif
                                 </div>
 
+                                <div class="form-group">
+                                    <label>Kategori</label>
+                                    <input type="text" value="{{$obats -> kategori}}"
+                                        class="form-control {{$errors->has('kategori')?'is-invalid':''}}"
+                                        name="kategori" required>
+                                    @if ($errors->has('kategori'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <p><b>{{ $errors->first('kategori') }}</b></p>
+                                    </span>
+                                    @endif
+                                </div>
+
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="form-group">
@@ -124,7 +136,7 @@
                     event.preventDefault();
                 }
             });
-        });    
+        });
     });
 </script>
 @endsection

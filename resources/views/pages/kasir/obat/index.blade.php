@@ -26,6 +26,7 @@
                                             <th>Kode</th>
                                             <th>Id Label</th>
                                             <th>Nama Produk</th>
+                                            <th>Kategori</th>
                                             <th>Satuan</th>
                                             <th>Harga</th>
                                             <th>Stok</th>
@@ -39,6 +40,7 @@
                                                 <th>{{$obat->kode_obat}}</th>
                                                 <th>{{$obat->id_merk}}</th>
                                                 <th>{{$obat->nama_produk}}</th>
+                                                <th>{{$obat->kategori}}</th>
                                                 <th>{{$obat->satuan}}</th>
                                                 <th>{{'Rp. '.number_format($obat->harga)}}</th>
                                                 <th>{{$obat->stok}}</th>

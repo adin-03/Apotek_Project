@@ -57,7 +57,7 @@
                         <select class="select2 form-control" id="data-obat">
                             <option value="0" selected="selected">--PIlih Produk--</option>
                             @foreach($obats as $obat)
-                            <option value="{{$obat->id}}">{{$obat->nama_produk}} / {{$obat->satuan}}</option>
+                            <option value="{{$obat->id}}">{{$obat->nama_produk}} /{{$obat->satuan}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -89,9 +89,10 @@
                                         <!-- <th width="5%">Kode</th> -->
                                         <th width="15%">Nama Produk</th>
                                         <th width="10%">Label</th>
+                                        <th width="10%">Kategori</th>
                                         <th width="10%">Satuan</th>
                                         <th width="10%">Harga</th>
-                                        <th width="40%">Qty</th>
+                                        <th width="30%">Qty</th>
                                         <th width="5%">Total</th>
                                         <th width="5%">Stok</th>
                                         <th width="5%"></th>
@@ -190,6 +191,7 @@
                         <tr>
                             <th scope="col">No</th>
                             <th scope="col">Nama</th>
+                            <th scope="col">Kategori</th>
                             <th scope="col">Qty</th>
                             <th scope="col">Harga</th>
                             <th scope="col">Total</th>
