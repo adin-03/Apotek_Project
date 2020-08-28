@@ -77,19 +77,12 @@ class DashboardController extends Controller
         $transaksi = Transaksi::where('no_transaksi', $no_transaksi)->first();
         if ($transaksi) {
             $pdf = PDF::loadview('pages.kasir.print-pembayaran', compact('transaksi'))
-                ->setPaper('A4', 'landscape');
+                ->setPaper([0,0,720,1440], 'landscape');
             return $pdf->stream();
             //return view('pages.kasir.print-pembayaran', compact('transaksi'));
         } else {
             return back();
         }
-    }
-
-    private function print($obats, $totalHarga, $totalBayar, $kembali)
-    {
-        //return view('pages.apotek.penjualan.kasir_pdf',compact(['obats', 'totalHarga', 'totalBayar', 'kembali']));
-        $pdf = PDF::loadview('pages.apotek.penjualan.kasir_pdf', compact(['obats', 'totalHarga', 'totalBayar', 'kembali']));
-        return $pdf->stream();
     }
 
     public function tambahPelanggan(Request $request)

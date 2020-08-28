@@ -36,7 +36,8 @@
                 @endif
                 <div class="row">
                     <div class="col-md-12">
-                        <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="row pull-left" method="POST">
+                        <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="row pull-left"
+                            method="POST">
                             @csrf
                             <div class="form-group col-md-5">
                                 <input type="text" class="form-control form-control-sm" name="tambah_nama_pelanggan"
@@ -62,21 +63,22 @@
                         </select>
                     </div>
 
-                    {{-- <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="col-md-8 row pull-right" method="POST">
-                        @csrf
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control form-control-sm" name="tambah_nama_pelanggan"
-                                placeholder="Nama pembeli">
-                        </div>
+                    {{-- <form action="{{ route('kasir.dashboard.tambahpelanggan') }}" class="col-md-8 row pull-right"
+                    method="POST">
+                    @csrf
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control form-control-sm" name="tambah_nama_pelanggan"
+                            placeholder="Nama pembeli">
+                    </div>
 
-                        <div class="form-group col-md-4">
-                            <input type="date" class="form-control form-control-sm" name="tambah_ttl_pelanggan"
-                                placeholder="Tanggal Lahir pembeli">
-                        </div>
+                    <div class="form-group col-md-4">
+                        <input type="date" class="form-control form-control-sm" name="tambah_ttl_pelanggan"
+                            placeholder="Tanggal Lahir pembeli">
+                    </div>
 
-                        <div class="form-group col-md-2">
-                            <button class="btn btn-info btn-sm" type="submit">tambah pelanggan</button>
-                        </div>
+                    <div class="form-group col-md-2">
+                        <button class="btn btn-info btn-sm" type="submit">tambah pelanggan</button>
+                    </div>
                     </form> --}}
                     <!-- <div class="col-12 col-md-6 col-xs-12 mb-1">
                     </div> -->
@@ -115,7 +117,8 @@
                         <select id="nama-pembeli" name="nama" class="form-control select-pembeli">
                             <option value="0" selected="selected">--PIlih Nama Pelanggan--</option>
                             @foreach ($pelanggans as $pelanggan)
-                                <option value="{{ $pelanggan->id }}">{{ $pelanggan->nama_pelanggan }} / {{ $pelanggan->no_pelanggan }}</option>
+                            <option value="{{ $pelanggan->id }}">{{ $pelanggan->nama_pelanggan }} /
+                                {{ $pelanggan->no_pelanggan }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -126,15 +129,15 @@
                     </div>
 
                     <div class="col-md-2 mb-1">
-                        <input type="number" class="form-control form-control-sm" onchange="rupiah(this.value)" id="tunai"
-                            name="total_bayar" placeholder="Total Bayar">
+                        <input type="number" class="form-control form-control-sm" onchange="rupiah(this.value)"
+                            id="tunai" name="total_bayar" placeholder="Total Bayar">
                     </div>
                     <div class="col-md-5 border-left">
                         <h3>
-                          <strong>
-                            <span>Total Harga</span> : Rp.
-                            <span class="float-right mr-1" id="total-harga">0</span>
-                          </strong>
+                            <strong>
+                                <span>Total Harga</span> : Rp.
+                                <span class="float-right mr-1" id="total-harga">0</span>
+                            </strong>
                         </h3>
                     </div>
 
@@ -159,54 +162,56 @@
                     </div>
 
                     <div class="col-md-12">
-                        <button type="button" data-toggle="modal" id="selesai" data-target="" class="float-right btn btn-primary btn-min-width mt-1 btn-lg">Selesai</button>
-                      </div>
+                        <button type="button" data-toggle="modal" id="selesai" data-target=""
+                            class="float-right btn btn-primary btn-min-width mt-1 btn-lg">Selesai</button>
+                    </div>
                 </div>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel1" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-success white">
-            <h4 class="modal-title white" id="basicModalLabel1">Detail Pembayaran</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                <div class="col-8">
-                    <h5 id="detail-nama"></h5>
-                    <h5 id="detail-umur"></h5>
+    <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success white">
+                    <h4 class="modal-title white" id="basicModalLabel1">Detail Pembayaran</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="col-4">
-                    <h5>Tanggal : {{\Carbon\Carbon::now()->format('d F Y')}}</h5>
-                    <h5 id="detail-waktu"></h5>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-8">
+                            <h5 id="detail-nama"></h5>
+                            <h5 id="detail-umur"></h5>
+                        </div>
+                        <div class="col-4">
+                            <h5>Tanggal : {{\Carbon\Carbon::now()->format('d F Y')}}</h5>
+                            <h5 id="detail-waktu"></h5>
+                        </div>
+                    </div>
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Kategori</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Harga</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="detail-pembayaran"></tbody>
+                    </table>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn grey btn-danger" data-dismiss="modal">Batal</button>
+                    <button type="button" id="simpan" class="btn btn-success">Simpan</button>
                 </div>
-                <table class="table table-borderless">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Kategori</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col">Harga</th>
-                            <th scope="col">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody id="detail-pembayaran"></tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn grey btn-danger" data-dismiss="modal">Batal</button>
-                <button type="button" id="simpan" class="btn btn-success">Simpan</button>
             </div>
         </div>
     </div>
-</div>
 </div>
 </div>
 
@@ -274,6 +279,12 @@
                 }
 
                 function calculation() {
+                    if(obat.kategori === 'Obat Keras'){
+                        if(this.value > 4){
+                            alert('maaf ini obat keras, hanya sampai 4 stok');
+                            this.value = 4;
+                        }
+                    }
                     let qtyHarga = this.value * this.dataset.harga;
                     if (+this.dataset.stok < +this.value) {
                         alert('Maaf stok tidak mencukupi')
@@ -299,10 +310,11 @@
                             kembali.innerText = '-'
                         }
                     }
-
                 }
 
-                qty.forEach(q => q.addEventListener('input', calculation))
+                qty.forEach(q => {
+                    q.addEventListener('input', calculation);
+                })
             }
         }
     });

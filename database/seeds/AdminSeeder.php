@@ -14,11 +14,6 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-//        Admin::create([
-//            'nama' => 'Administrator',
-//            'email' => 'admin@mail.com',
-//            'password' => bcrypt(12345678)
-//        ]);
 
        $apotek = Apotek::create([
             'nama' => 'Apotek Cemara',

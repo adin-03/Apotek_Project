@@ -54,7 +54,7 @@
             <thead>
                 <tr>
                     <th colspan="3">Invoice <strong>{{ $transaksi->no_transaksi }}</strong></th>
-                    <th colspan="2">
+                    <th colspan="3">
                         <strong>Tanggal : {{ $transaksi->created_at->format('d-m-Y') }}</strong><br>
                         <strong>Waktu : {{ $transaksi->created_at->format('H:i:s') }}</strong>
 
@@ -62,7 +62,7 @@
                 </tr>
                 <tr>
 
-                    <td colspan="5">
+                    <td colspan="6">
                         <h4>Nama : {{ $transaksi->pelanggan->nama_pelanggan }} / {{ $transaksi->pelanggan->no_pelanggan }}</h4>
                         <h4>Umur : {{ $transaksi->pelanggan->umur }} th</h4>
                     </td>
@@ -92,7 +92,7 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <th colspan="3" rowspan="3"></th>
+                    <th colspan="4" rowspan="3"></th>
                     <th>Total Bayar</th>
                     <td>Rp. {{ number_format($transaksi->total_bayar, 0,',','.') }}</td>
                 </tr>
