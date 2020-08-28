@@ -18,6 +18,7 @@ class CreateTransaksiObatsTable extends Migration
             $table->bigInteger('id_obat')->unsigned();
             $table->bigInteger('id_transaksi')->unsigned();
             $table->string('nama_produk');
+            $table->string('kategori');
             $table->integer('harga');
             $table->integer('kuantitas');
             $table->integer('total');

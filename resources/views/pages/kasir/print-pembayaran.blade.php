@@ -72,6 +72,7 @@
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
+                    <th>Kategori</th>
                     <th>Qty</th>
                     <th>Harga</th>
                     <th>Total</th>
@@ -81,6 +82,7 @@
                 <tr>
                     <th>{{ $loop->iteration }}</th>
                     <th>{{ $item->nama_produk }}</th>
+                    <th>{{ $item->kategori }}</th>
                     <th>{{ $item->kuantitas }}</th>
                     <th>Rp. {{ number_format($item->harga, 0,',','.') }}</th>
                     <th>Rp. {{ number_format($item->harga * $item->kuantitas, 0,',','.') }}</th>

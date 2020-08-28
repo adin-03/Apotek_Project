@@ -47,8 +47,6 @@ class DashboardController extends Controller
         $transaksi = Transaksi::create([
             'no_transaksi' => $no_transaksi,
             'id_pelanggan' => $request->nama_pembeli,
-            //'nama_pembeli' => $request->nama_pembeli,
-            //'umur' => $request->umur,
             'id_kasir' => $request->id_kasir,
             'total_bayar' => $request->total_bayar
         ]);
@@ -78,8 +76,8 @@ class DashboardController extends Controller
     {
         $transaksi = Transaksi::where('no_transaksi', $no_transaksi)->first();
         if ($transaksi) {
-            $pdf = PDF::loadview('pages.kasir.print-pembayaran',compact('transaksi'))
-            ->setPaper('A4', 'landscape');
+            $pdf = PDF::loadview('pages.kasir.print-pembayaran', compact('transaksi'))
+                ->setPaper('A4', 'landscape');
             return $pdf->stream();
             //return view('pages.kasir.print-pembayaran', compact('transaksi'));
         } else {

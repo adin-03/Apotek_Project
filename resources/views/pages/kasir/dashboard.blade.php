@@ -87,12 +87,12 @@
                                     <tr>
                                         <th width="5%">No</th>
                                         <!-- <th width="5%">Kode</th> -->
-                                        <th width="15%">Nama Produk</th>
-                                        <th width="10%">Label</th>
-                                        <th width="10%">Kategori</th>
-                                        <th width="10%">Satuan</th>
+                                        <th width="10%">Nama Produk</th>
+                                        <th width="5%">Label</th>
+                                        <th width="5%">Kategori</th>
+                                        <th>Satuan</th>
                                         <th width="10%">Harga</th>
-                                        <th width="30%">Qty</th>
+                                        <th width="30%">Kuantitas</th>
                                         <th width="5%">Total</th>
                                         <th width="5%">Stok</th>
                                         <th width="5%"></th>
@@ -397,17 +397,17 @@
             this.dataset.target = '#default';
             daftarObat.map((p, i) => trModal += tampilDetail(p, i));
             trModal += `<tr>
-          <td colspan="3"></td>
+          <td colspan="4"></td>
           <td>Total Harga</td>
           <td>Rp. ${rupiah(total())}</td>
         </tr>
         <tr>
-          <td colspan="3"></td>
+          <td colspan="4"></td>
           <td>Total Bayar</td>
           <td>Rp. ${rupiah(tunai.value)}</td>
         </tr>
         <tr>
-          <td colspan="3"></td>
+          <td colspan="4"></td>
           <td>Kembali</td>
           <td>Rp. ${rupiah(total() - tunai.value)}</td>
         </tr>`
@@ -450,6 +450,7 @@
           <td class="align-middle">${i+1}</td>
           <td class="align-middle">${o.nama_produk}</td>
           <td class="align-middle">${o.merk.merk}</td>
+          <td class="align-middle">${o.kategori}</td>
           <td class="align-middle">${o.satuan}</td>
           <td class="align-middle">${rupiah(o.harga)}</td>
           <td class="align-middle">
@@ -470,6 +471,7 @@
     <tr>
       <th scope="row">${i+1}</th>
       <td>${p.nama_produk}</td>
+      <td>${p.kategori}</td>
       <td>${p.qty}</td>
       <td>Rp. ${rupiah(p.harga)}</td>
       <td>Rp. ${rupiah(p.harga * p.qty)}</td>

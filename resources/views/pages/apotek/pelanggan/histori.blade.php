@@ -22,7 +22,9 @@
                 <h4 class="card-title">{{ $transaksi->created_at->diffForHumans() }}</h4>
                 @foreach ($transaksi->obats as $obat)
                 <p class="card-text">Nama Obat : {{ $obat->nama_produk }}</p>
+                <p class="card-text">Kategori : {{ $obat->kategori }}</p>
                 <p class="card-text">Qty Obat : {{ $obat->kuantitas }}</p>
+
                 @endforeach
               </div>
             </div>

@@ -46,6 +46,7 @@
                 <tr>
                     <th scope="col">No</th>
                     <th scope="col">Nama</th>
+                    <th scope="col">Kategori</th>
                     <th scope="col">Qty</th>
                     <th scope="col">Harga</th>
                     <th scope="col">Total</th>
@@ -56,6 +57,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $obat['nama_produk'] }}</td>
+                    <td>{{ $obat['kategori'] }}</td>
                     <td>{{ $obat['qty'] }}</td>
                     <td>{{ $obat['harga'] * $obat['qty'] }}</td>
                 </tr>
